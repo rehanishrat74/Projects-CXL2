@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/CXLRobot_ServiceActivation/ServiceActivation" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/CXLRobot_ServiceActivation/ServiceActivation" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/CXLRobot_ServiceActivation/ServiceActivation">
+      <s:element name="EnabledServices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CustomerID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="OrderID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsOrderSuccess" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="PayMode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnabledServicesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnabledServicesResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBizInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ResellerUID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="OrderID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CustomerID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Product" type="tns:ArrayOfProductDetail" />
+            <s:element minOccurs="0" maxOccurs="1" name="PayStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfProductDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProductDetail" type="tns:ProductDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProductDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ProductCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Quantity" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GetBizInfoResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ERRORCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ERRORDESC" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBizInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetBizInfoResult" type="tns:GetBizInfoResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="EnabledServicesSoapIn">
+    <wsdl:part name="parameters" element="tns:EnabledServices" />
+  </wsdl:message>
+  <wsdl:message name="EnabledServicesSoapOut">
+    <wsdl:part name="parameters" element="tns:EnabledServicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBizInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBizInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetBizInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBizInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceActivationSoap">
+    <wsdl:operation name="EnabledServices">
+      <wsdl:input message="tns:EnabledServicesSoapIn" />
+      <wsdl:output message="tns:EnabledServicesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBizInfo">
+      <wsdl:input message="tns:GetBizInfoSoapIn" />
+      <wsdl:output message="tns:GetBizInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceActivationSoap" type="tns:ServiceActivationSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="EnabledServices">
+      <soap:operation soapAction="http://tempuri.org/CXLRobot_ServiceActivation/ServiceActivation/EnabledServices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBizInfo">
+      <soap:operation soapAction="http://tempuri.org/CXLRobot_ServiceActivation/ServiceActivation/GetBizInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceActivation">
+    <wsdl:port name="ServiceActivationSoap" binding="tns:ServiceActivationSoap">
+      <soap:address location="http://cxlrobot.accountscentre.com/CXLRobot_ServiceActivation/ServiceActivation.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

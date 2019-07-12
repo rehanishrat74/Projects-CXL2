@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "D:\...\InsertInCXLRobot_Webservice\", "..\InsertInCXLRobot_Webservice", "{E4EF5EE3-CB06-48E0-BE06-5B5AFF4B0262}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = ""$/InsertInCXLRobot", GQAAAAAA"
+		SccAuxPath = ""
+		SccLocalPath = "."
+		SccProvider = "MSSCCI:Microsoft Visual SourceSafe"
+		Debug.AspNetCompiler.VirtualPath = "/InsertInCXLRobot_Webservice"
+		Debug.AspNetCompiler.PhysicalPath = "..\InsertInCXLRobot_Webservice\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\InsertInCXLRobot_Webservice\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/InsertInCXLRobot_Webservice"
+		Release.AspNetCompiler.PhysicalPath = "..\InsertInCXLRobot_Webservice\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\InsertInCXLRobot_Webservice\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "49931"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 1
+		SccWebProject0 = true
+		SccProjectUniqueName0 = .
+		SccProjectName0 = \u0022$/InsertInCXLRobot\u0022,\u0020GQAAAAAA
+		SccLocalPath0 = D:\\Projects\\CXL\\InsertInCXLRobot_Webservice
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectEnlistmentChoice0 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4EF5EE3-CB06-48E0-BE06-5B5AFF4B0262}.Debug|.NET.ActiveCfg = Debug|.NET
+		{E4EF5EE3-CB06-48E0-BE06-5B5AFF4B0262}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

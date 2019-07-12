@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://tempuri.org/Infinishops.Support.Web/OrderProcessing" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/Infinishops.Support.Web/OrderProcessing" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/Infinishops.Support.Web/OrderProcessing">
+      <s:element name="ProcessOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsOrderInformation">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProcessOrderResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessOrderXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderInformationXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessOrderXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProcessOrderXmlResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Test">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateInvoiceForOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderInformationXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateInvoiceForOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenerateInvoiceForOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int" type="s:int" />
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </types>
+  <message name="ProcessOrderSoapIn">
+    <part name="parameters" element="s0:ProcessOrder" />
+  </message>
+  <message name="ProcessOrderSoapOut">
+    <part name="parameters" element="s0:ProcessOrderResponse" />
+  </message>
+  <message name="ProcessOrderXmlSoapIn">
+    <part name="parameters" element="s0:ProcessOrderXml" />
+  </message>
+  <message name="ProcessOrderXmlSoapOut">
+    <part name="parameters" element="s0:ProcessOrderXmlResponse" />
+  </message>
+  <message name="TestSoapIn">
+    <part name="parameters" element="s0:Test" />
+  </message>
+  <message name="TestSoapOut">
+    <part name="parameters" element="s0:TestResponse" />
+  </message>
+  <message name="GenerateInvoiceForOrderSoapIn">
+    <part name="parameters" element="s0:GenerateInvoiceForOrder" />
+  </message>
+  <message name="GenerateInvoiceForOrderSoapOut">
+    <part name="parameters" element="s0:GenerateInvoiceForOrderResponse" />
+  </message>
+  <message name="ProcessOrderXmlHttpGetIn">
+    <part name="OrderInformationXml" type="s:string" />
+  </message>
+  <message name="ProcessOrderXmlHttpGetOut">
+    <part name="Body" element="s0:int" />
+  </message>
+  <message name="TestHttpGetIn">
+    <part name="TestData" type="s:string" />
+  </message>
+  <message name="TestHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="GenerateInvoiceForOrderHttpGetIn">
+    <part name="OrderInformationXML" type="s:string" />
+  </message>
+  <message name="GenerateInvoiceForOrderHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="ProcessOrderXmlHttpPostIn">
+    <part name="OrderInformationXml" type="s:string" />
+  </message>
+  <message name="ProcessOrderXmlHttpPostOut">
+    <part name="Body" element="s0:int" />
+  </message>
+  <message name="TestHttpPostIn">
+    <part name="TestData" type="s:string" />
+  </message>
+  <message name="TestHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="GenerateInvoiceForOrderHttpPostIn">
+    <part name="OrderInformationXML" type="s:string" />
+  </message>
+  <message name="GenerateInvoiceForOrderHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <portType name="OrderProcessingSoap">
+    <operation name="ProcessOrder">
+      <input message="s0:ProcessOrderSoapIn" />
+      <output message="s0:ProcessOrderSoapOut" />
+    </operation>
+    <operation name="ProcessOrderXml">
+      <input message="s0:ProcessOrderXmlSoapIn" />
+      <output message="s0:ProcessOrderXmlSoapOut" />
+    </operation>
+    <operation name="Test">
+      <input message="s0:TestSoapIn" />
+      <output message="s0:TestSoapOut" />
+    </operation>
+    <operation name="GenerateInvoiceForOrder">
+      <input message="s0:GenerateInvoiceForOrderSoapIn" />
+      <output message="s0:GenerateInvoiceForOrderSoapOut" />
+    </operation>
+  </portType>
+  <portType name="OrderProcessingHttpGet">
+    <operation name="ProcessOrderXml">
+      <input message="s0:ProcessOrderXmlHttpGetIn" />
+      <output message="s0:ProcessOrderXmlHttpGetOut" />
+    </operation>
+    <operation name="Test">
+      <input message="s0:TestHttpGetIn" />
+      <output message="s0:TestHttpGetOut" />
+    </operation>
+    <operation name="GenerateInvoiceForOrder">
+      <input message="s0:GenerateInvoiceForOrderHttpGetIn" />
+      <output message="s0:GenerateInvoiceForOrderHttpGetOut" />
+    </operation>
+  </portType>
+  <portType name="OrderProcessingHttpPost">
+    <operation name="ProcessOrderXml">
+      <input message="s0:ProcessOrderXmlHttpPostIn" />
+      <output message="s0:ProcessOrderXmlHttpPostOut" />
+    </operation>
+    <operation name="Test">
+      <input message="s0:TestHttpPostIn" />
+      <output message="s0:TestHttpPostOut" />
+    </operation>
+    <operation name="GenerateInvoiceForOrder">
+      <input message="s0:GenerateInvoiceForOrderHttpPostIn" />
+      <output message="s0:GenerateInvoiceForOrderHttpPostOut" />
+    </operation>
+  </portType>
+  <binding name="OrderProcessingSoap" type="s0:OrderProcessingSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ProcessOrder">
+      <soap:operation soapAction="http://tempuri.org/Infinishops.Support.Web/OrderProcessing/ProcessOrder" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ProcessOrderXml">
+      <soap:operation soapAction="http://tempuri.org/Infinishops.Support.Web/OrderProcessing/ProcessOrderXml" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Test">
+      <soap:operation soapAction="http://tempuri.org/Infinishops.Support.Web/OrderProcessing/Test" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GenerateInvoiceForOrder">
+      <soap:operation soapAction="http://tempuri.org/Infinishops.Support.Web/OrderProcessing/GenerateInvoiceForOrder" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="OrderProcessingSoap12" type="s0:OrderProcessingSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <operation name="ProcessOrder">
+      <soap12:operation soapAction="http://tempuri.org/Infinishops.Support.Web/OrderProcessing/ProcessOrder" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="ProcessOrderXml">
+      <soap12:operation soapAction="http://tempuri.org/Infinishops.Support.Web/OrderProcessing/ProcessOrderXml" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Test">
+      <soap12:operation soapAction="http://tempuri.org/Infinishops.Support.Web/OrderProcessing/Test" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="GenerateInvoiceForOrder">
+      <soap12:operation soapAction="http://tempuri.org/Infinishops.Support.Web/OrderProcessing/GenerateInvoiceForOrder" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="OrderProcessingHttpGet" type="s0:OrderProcessingHttpGet">
+    <http:binding verb="GET" />
+    <operation name="ProcessOrderXml">
+      <http:operation location="/ProcessOrderXml" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="Test">
+      <http:operation location="/Test" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GenerateInvoiceForOrder">
+      <http:operation location="/GenerateInvoiceForOrder" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="OrderProcessingHttpPost" type="s0:OrderProcessingHttpPost">
+    <http:binding verb="POST" />
+    <operation name="ProcessOrderXml">
+      <http:operation location="/ProcessOrderXml" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="Test">
+      <http:operation location="/Test" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GenerateInvoiceForOrder">
+      <http:operation location="/GenerateInvoiceForOrder" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <service name="OrderProcessing">
+    <port name="OrderProcessingSoap" binding="s0:OrderProcessingSoap">
+      <soap:address location="http://ishops.webservices.com/order/orderprocessing.asmx" />
+    </port>
+    <port name="OrderProcessingSoap12" binding="s0:OrderProcessingSoap12">
+      <soap12:address location="http://ishops.webservices.com/order/orderprocessing.asmx" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </port>
+    <port name="OrderProcessingHttpGet" binding="s0:OrderProcessingHttpGet">
+      <http:address location="http://ishops.webservices.com/order/orderprocessing.asmx" />
+    </port>
+    <port name="OrderProcessingHttpPost" binding="s0:OrderProcessingHttpPost">
+      <http:address location="http://ishops.webservices.com/order/orderprocessing.asmx" />
+    </port>
+  </service>
+</definitions>

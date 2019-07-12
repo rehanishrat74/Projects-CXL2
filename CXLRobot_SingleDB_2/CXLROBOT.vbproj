@@ -1,0 +1,363 @@
+<VisualStudioProject>
+    <VisualBasic
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{903185C4-B771-49B9-87CC-3CB5D71BC566}"
+        SccProjectName = "SAK"
+        SccLocalPath = "SAK"
+        SccAuxPath = "SAK"
+        SccProvider = "SAK"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = "execute_sequence.ico"
+                AssemblyKeyContainerName = ""
+                AssemblyName = "WindowsGateWayCreditCard"
+                AssemblyOriginatorKeyFile = ""
+                AssemblyOriginatorKeyMode = "None"
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "WinExe"
+                OptionCompare = "Binary"
+                OptionExplicit = "On"
+                OptionStrict = "Off"
+                RootNamespace = "WindowsGateWayCreditCard"
+                StartupObject = "WindowsGateWayCreditCard.CXL.Form1"
+            >
+                <Config
+                    Name = "Debug"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "true"
+                    DefineTrace = "true"
+                    DebugSymbols = "true"
+                    IncrementalBuild = "true"
+                    Optimize = "false"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+                <Config
+                    Name = "Release"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "false"
+                    DefineTrace = "true"
+                    DebugSymbols = "false"
+                    IncrementalBuild = "false"
+                    Optimize = "true"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                />
+                <Reference
+                    Name = "System.Windows.Forms"
+                    AssemblyName = "System.Windows.Forms"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                />
+                <Reference
+                    Name = "System.Web.Services"
+                    AssemblyName = "System.Web.Services"
+                    HintPath = "C:\WINNT\Microsoft.NET\Framework\v1.1.4322\System.Web.Services.dll"
+                />
+                <Reference
+                    Name = "COMSVCSLib"
+                    Guid = "{2A005C00-A5DE-11CF-9E66-00AA00A3F464}"
+                    VersionMajor = "1"
+                    VersionMinor = "0"
+                    Lcid = "0"
+                    WrapperTool = "tlbimp"
+                />
+                <Reference
+                    Name = "pwdsqlsrvdotnet"
+                    AssemblyName = "pwdsqlsrvdotnet"
+                    HintPath = "\\netserver\Projects\AccountsCentre\Production\Version 1\AccountsCentre\UIProjects\www.AccountsCentre.com\Library\Components\pwdsqlsrvdotnet.dll"
+                />
+                <Reference
+                    Name = "MySql.Data"
+                    AssemblyName = "MySql.Data"
+                    HintPath = "bin\MySql.Data.dll"
+                />
+                <Reference
+                    Name = "InfiniLogic.AccountsCentre.Common"
+                    AssemblyName = "InfiniLogic.AccountsCentre.Common"
+                    HintPath = "\\netserver\Projects\AccountsCentre\Production\Version 1\AccountsCentre\UIProjects\www.AccountsCentre.com\Library\Components\InfiniLogic.AccountsCentre.Common.dll"
+                />
+                <Reference
+                    Name = "rsaLibrary1"
+                    AssemblyName = "rsaLibrary1"
+                    HintPath = "bin\rsaLibrary1.dll"
+                />
+                <Reference
+                    Name = "System.Web"
+                    AssemblyName = "System.Web"
+                    HintPath = "C:\WINNT\Microsoft.NET\Framework\v1.1.4322\System.Web.dll"
+                />
+                <Reference
+                    Name = "InvoicePost"
+                    AssemblyName = "InvoicePost"
+                    HintPath = "\\netserver\Projects\AccountsCentre\Production\Version 1\AccountsCentre\UIProjects\www.AccountsCentre.com\Library\Components\InvoicePost.dll"
+                />
+                <Reference
+                    Name = "BPtsPayment"
+                    AssemblyName = "BPtsPayment"
+                    HintPath = "bin\BPtsPayment.dll"
+                />
+            </References>
+            <Imports>
+                <Import Namespace = "Microsoft.VisualBasic" />
+                <Import Namespace = "System" />
+                <Import Namespace = "System.Collections" />
+                <Import Namespace = "System.Data" />
+                <Import Namespace = "System.Drawing" />
+                <Import Namespace = "System.Diagnostics" />
+                <Import Namespace = "System.Windows.Forms" />
+            </Imports>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "App.config"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "AssemblyInfo.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "CommandData.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Connection.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "CXLROBOT.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "CXLROBOT.resx"
+                    DependentUpon = "CXLROBOT.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "CXLTRANSACTION.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "execute_sequence.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "XCreditCardInformation.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "XMySqlCommand.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\CXLWEB\cxlservices.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\CXLWEB\cxlservices.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\CXLWEB\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\CXLWEB\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\CXLWEB\"
+                    WebReferenceUrl = "http://gateway.infinilogic.com/cxlservices.asmx"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\InfiniMarket\Default.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\InfiniMarket\Default.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\InfiniMarket\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\InfiniMarket\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\InfiniMarket\"
+                    WebReferenceUrl = "http://service.infinimarket.com/Default.asmx"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\InfiniPaypal\InfiniPayPalWebService.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\InfiniPaypal\InfiniPayPalWebService.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\InfiniPaypal\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\InfiniPaypal\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\InfiniPaypal\"
+                    WebReferenceUrl = "http://www.infinipaypal.com/InfiniPayPalWebService.asmx"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\InvoicePost\AccountsProService.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\InvoicePost\AccountsProService.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\InvoicePost\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\InvoicePost\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\InvoicePost\"
+                    WebReferenceUrl = "http://accountsws.accountscentre.com/AccountsProService.asmx"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\Io.InfiniShops\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\Io.InfiniShops\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\Io.InfiniShops\ServiceActivation.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\Io.InfiniShops\ServiceActivation.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\Io.InfiniShops\"
+                    WebReferenceUrl = "http://io.infinishops.com/services/ServiceActivation.asmx"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\ServiceActivation\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\ServiceActivation\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\ServiceActivation\ServiceActivation.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\ServiceActivation\ServiceActivation.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\ServiceActivation\"
+                    WebReferenceUrl = "http://cxlrobot.accountscentre.com/CXLRobot_ServiceActivation/ServiceActivation.asmx"
+                    UrlBehavior = "Static"
+                />
+                <Folder
+                    RelPath = "Web References\"
+                    WebReferences = "TRUE"
+                />
+            </Include>
+        </Files>
+    </VisualBasic>
+</VisualStudioProject>
+

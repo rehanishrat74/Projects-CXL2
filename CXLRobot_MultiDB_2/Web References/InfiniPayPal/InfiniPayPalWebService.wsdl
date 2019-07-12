@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="MakeTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paypaID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paypalPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Envoirement" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cardType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CVV2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endMonth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endYear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="totalAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="moneyType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="invoiceID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MakeTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MakeTransactionResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InstallCertificate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MIDentity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Certificate" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InstallCertificateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InstallCertificateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsCertificatInstalled">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paypaID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paypalPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Envoirement" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsCertificatInstalledResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsCertificatInstalledResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="MakeTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:MakeTransaction" />
+  </wsdl:message>
+  <wsdl:message name="MakeTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:MakeTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="InstallCertificateSoapIn">
+    <wsdl:part name="parameters" element="tns:InstallCertificate" />
+  </wsdl:message>
+  <wsdl:message name="InstallCertificateSoapOut">
+    <wsdl:part name="parameters" element="tns:InstallCertificateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsCertificatInstalledSoapIn">
+    <wsdl:part name="parameters" element="tns:IsCertificatInstalled" />
+  </wsdl:message>
+  <wsdl:message name="IsCertificatInstalledSoapOut">
+    <wsdl:part name="parameters" element="tns:IsCertificatInstalledResponse" />
+  </wsdl:message>
+  <wsdl:portType name="InfiniPayPalWebServiceSoap">
+    <wsdl:operation name="MakeTransaction">
+      <wsdl:input message="tns:MakeTransactionSoapIn" />
+      <wsdl:output message="tns:MakeTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InstallCertificate">
+      <wsdl:input message="tns:InstallCertificateSoapIn" />
+      <wsdl:output message="tns:InstallCertificateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ISCertInstalled">
+      <wsdl:input name="IsCertificatInstalled" message="tns:IsCertificatInstalledSoapIn" />
+      <wsdl:output name="IsCertificatInstalled" message="tns:IsCertificatInstalledSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InfiniPayPalWebServiceSoap" type="tns:InfiniPayPalWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MakeTransaction">
+      <soap:operation soapAction="http://tempuri.org/MakeTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InstallCertificate">
+      <soap:operation soapAction="http://tempuri.org/InstallCertificate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISCertInstalled">
+      <soap:operation soapAction="http://tempuri.org/IsCertificatInstalled" style="document" />
+      <wsdl:input name="IsCertificatInstalled">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="IsCertificatInstalled">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="InfiniPayPalWebServiceSoap12" type="tns:InfiniPayPalWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="MakeTransaction">
+      <soap12:operation soapAction="http://tempuri.org/MakeTransaction" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InstallCertificate">
+      <soap12:operation soapAction="http://tempuri.org/InstallCertificate" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISCertInstalled">
+      <soap12:operation soapAction="http://tempuri.org/IsCertificatInstalled" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input name="IsCertificatInstalled">
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output name="IsCertificatInstalled">
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InfiniPayPalWebService">
+    <wsdl:port name="InfiniPayPalWebServiceSoap" binding="tns:InfiniPayPalWebServiceSoap">
+      <soap:address location="http://paypalgate.infinishops.com/InfiniPayPalWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="InfiniPayPalWebServiceSoap12" binding="tns:InfiniPayPalWebServiceSoap12">
+      <soap12:address location="http://paypalgate.infinishops.com/InfiniPayPalWebService.asmx" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

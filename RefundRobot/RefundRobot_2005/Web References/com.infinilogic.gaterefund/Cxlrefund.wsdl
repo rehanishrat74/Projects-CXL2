@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/CxlRefund/Cxlrefund" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/CxlRefund/Cxlrefund" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/CxlRefund/Cxlrefund">
+      <s:element name="RefundProcessingWithCcv">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreditCardNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IssueNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StartDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardExpiry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLResponseCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLMessage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agentAcquirer" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="rid" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="merchantloginid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerloginid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sender" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ccv" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RefundProcessingWithCcvResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RefundProcessingWithCcvResult" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLResponseCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RefundProcessing">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreditCardNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IssueNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StartDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardExpiry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLResponseCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLMessage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agentAcquirer" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="rid" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="merchantloginid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerloginid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sender" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RefundProcessingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RefundProcessingResult" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLResponseCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RefundLiveTest">
+        <s:complexType />
+      </s:element>
+      <s:element name="RefundLiveTestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RefundLiveTestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RefundProcessingWithCcvSoapIn">
+    <wsdl:part name="parameters" element="tns:RefundProcessingWithCcv" />
+  </wsdl:message>
+  <wsdl:message name="RefundProcessingWithCcvSoapOut">
+    <wsdl:part name="parameters" element="tns:RefundProcessingWithCcvResponse" />
+  </wsdl:message>
+  <wsdl:message name="RefundProcessingSoapIn">
+    <wsdl:part name="parameters" element="tns:RefundProcessing" />
+  </wsdl:message>
+  <wsdl:message name="RefundProcessingSoapOut">
+    <wsdl:part name="parameters" element="tns:RefundProcessingResponse" />
+  </wsdl:message>
+  <wsdl:message name="RefundLiveTestSoapIn">
+    <wsdl:part name="parameters" element="tns:RefundLiveTest" />
+  </wsdl:message>
+  <wsdl:message name="RefundLiveTestSoapOut">
+    <wsdl:part name="parameters" element="tns:RefundLiveTestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CxlrefundSoap">
+    <wsdl:operation name="RefundProcessing">
+      <wsdl:input name="RefundProcessingWithCcv" message="tns:RefundProcessingWithCcvSoapIn" />
+      <wsdl:output name="RefundProcessingWithCcv" message="tns:RefundProcessingWithCcvSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RefundProcessing">
+      <wsdl:input message="tns:RefundProcessingSoapIn" />
+      <wsdl:output message="tns:RefundProcessingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IfRefundLive">
+      <wsdl:input name="RefundLiveTest" message="tns:RefundLiveTestSoapIn" />
+      <wsdl:output name="RefundLiveTest" message="tns:RefundLiveTestSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CxlrefundSoap" type="tns:CxlrefundSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RefundProcessing">
+      <soap:operation soapAction="http://tempuri.org/CxlRefund/Cxlrefund/RefundProcessingWithCcv" style="document" />
+      <wsdl:input name="RefundProcessingWithCcv">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RefundProcessingWithCcv">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefundProcessing">
+      <soap:operation soapAction="http://tempuri.org/CxlRefund/Cxlrefund/RefundProcessing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IfRefundLive">
+      <soap:operation soapAction="http://tempuri.org/CxlRefund/Cxlrefund/RefundLiveTest" style="document" />
+      <wsdl:input name="RefundLiveTest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RefundLiveTest">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Cxlrefund">
+    <wsdl:port name="CxlrefundSoap" binding="tns:CxlrefundSoap">
+      <soap:address location="http://gaterefund.infinilogic.com/Cxlrefund.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

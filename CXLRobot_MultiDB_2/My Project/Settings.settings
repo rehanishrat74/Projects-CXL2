@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="WindowsGateWayCreditCard_com_webservices_ishops_OrderProcessing" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://ishops.webservices.com/order/orderprocessing.asmx</Value>
+    </Setting>
+    <Setting Name="WindowsGateWayCreditCard_com_infinishops_postservices_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://postservices.infinishops.com/Service.asmx</Value>
+    </Setting>
+    <Setting Name="WindowsGateWayCreditCard_ServiceActivation_ServiceActivation" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://cxlrobot.accountscentre.com/CXLRobot_ServiceActivation/ServiceActivation.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

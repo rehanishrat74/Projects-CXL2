@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[CustomerInformation.vbproj]
+SCC_Aux_Path = "\\netserver\SourceSafe Databases\CXLRobo"
+SCC_Project_Name = "$/sbc.accountscentre.com", XUAAAAAA
+
+[CustomerInformation.sln]
+SCC_Aux_Path = "\\netserver\SourceSafe Databases\CXLRobo"
+SCC_Project_Name = "$/sbc.accountscentre.com", XUAAAAAA

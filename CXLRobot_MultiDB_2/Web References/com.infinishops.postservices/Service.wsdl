@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="IOServiceData">
+        <s:complexType />
+      </s:element>
+      <s:element name="IOServiceDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IOServiceDataResult" type="tns:ErrorCodeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ErrorCodeInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorDetailMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SuccessOrders" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FailureOrders" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="IOServiceData_WithParameters">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerUId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IOServiceData_WithParametersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IOServiceData_WithParametersResult" type="tns:ErrorCodeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IOServiceDataForInvoice">
+        <s:complexType />
+      </s:element>
+      <s:element name="IOServiceDataForInvoiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IOServiceDataForInvoiceResult" type="tns:ErrorCodeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IOServiceDataForInvoice_WithParameters">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerUId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IOServiceDataForInvoice_WithParametersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IOServiceDataForInvoice_WithParametersResult" type="tns:ErrorCodeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPostOrderTicket">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddPostOrderTicketResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddPostOrderTicketResult" type="tns:ErrorCodeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPostOrderTicket_WithParameters">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MerchantId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CustomerId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPostOrderTicket_WithParametersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddPostOrderTicket_WithParametersResult" type="tns:ErrorCodeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPostOrderEmailInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddPostOrderEmailInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddPostOrderEmailInfoResult" type="tns:ErrorCodeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPostOrderEmailInfo_WithParameters">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MerchantId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CustomerId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPostOrderEmailInfo_WithParametersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddPostOrderEmailInfo_WithParametersResult" type="tns:ErrorCodeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RessellerData">
+        <s:complexType />
+      </s:element>
+      <s:element name="RessellerDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RessellerDataResult" type="tns:ErrorCodeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RessellerData_WithParameters">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerUId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RessellerData_WithParametersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RessellerData_WithParametersResult" type="tns:ErrorCodeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IOServiceDataSoapIn">
+    <wsdl:part name="parameters" element="tns:IOServiceData" />
+  </wsdl:message>
+  <wsdl:message name="IOServiceDataSoapOut">
+    <wsdl:part name="parameters" element="tns:IOServiceDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOServiceData_WithParametersSoapIn">
+    <wsdl:part name="parameters" element="tns:IOServiceData_WithParameters" />
+  </wsdl:message>
+  <wsdl:message name="IOServiceData_WithParametersSoapOut">
+    <wsdl:part name="parameters" element="tns:IOServiceData_WithParametersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOServiceDataForInvoiceSoapIn">
+    <wsdl:part name="parameters" element="tns:IOServiceDataForInvoice" />
+  </wsdl:message>
+  <wsdl:message name="IOServiceDataForInvoiceSoapOut">
+    <wsdl:part name="parameters" element="tns:IOServiceDataForInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOServiceDataForInvoice_WithParametersSoapIn">
+    <wsdl:part name="parameters" element="tns:IOServiceDataForInvoice_WithParameters" />
+  </wsdl:message>
+  <wsdl:message name="IOServiceDataForInvoice_WithParametersSoapOut">
+    <wsdl:part name="parameters" element="tns:IOServiceDataForInvoice_WithParametersResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddPostOrderTicketSoapIn">
+    <wsdl:part name="parameters" element="tns:AddPostOrderTicket" />
+  </wsdl:message>
+  <wsdl:message name="AddPostOrderTicketSoapOut">
+    <wsdl:part name="parameters" element="tns:AddPostOrderTicketResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddPostOrderTicket_WithParametersSoapIn">
+    <wsdl:part name="parameters" element="tns:AddPostOrderTicket_WithParameters" />
+  </wsdl:message>
+  <wsdl:message name="AddPostOrderTicket_WithParametersSoapOut">
+    <wsdl:part name="parameters" element="tns:AddPostOrderTicket_WithParametersResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddPostOrderEmailInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:AddPostOrderEmailInfo" />
+  </wsdl:message>
+  <wsdl:message name="AddPostOrderEmailInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:AddPostOrderEmailInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddPostOrderEmailInfo_WithParametersSoapIn">
+    <wsdl:part name="parameters" element="tns:AddPostOrderEmailInfo_WithParameters" />
+  </wsdl:message>
+  <wsdl:message name="AddPostOrderEmailInfo_WithParametersSoapOut">
+    <wsdl:part name="parameters" element="tns:AddPostOrderEmailInfo_WithParametersResponse" />
+  </wsdl:message>
+  <wsdl:message name="RessellerDataSoapIn">
+    <wsdl:part name="parameters" element="tns:RessellerData" />
+  </wsdl:message>
+  <wsdl:message name="RessellerDataSoapOut">
+    <wsdl:part name="parameters" element="tns:RessellerDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="RessellerData_WithParametersSoapIn">
+    <wsdl:part name="parameters" element="tns:RessellerData_WithParameters" />
+  </wsdl:message>
+  <wsdl:message name="RessellerData_WithParametersSoapOut">
+    <wsdl:part name="parameters" element="tns:RessellerData_WithParametersResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="IOServiceData">
+      <wsdl:input message="tns:IOServiceDataSoapIn" />
+      <wsdl:output message="tns:IOServiceDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IOServiceData_WithParameters">
+      <wsdl:input message="tns:IOServiceData_WithParametersSoapIn" />
+      <wsdl:output message="tns:IOServiceData_WithParametersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IOServiceDataForInvoice">
+      <wsdl:input message="tns:IOServiceDataForInvoiceSoapIn" />
+      <wsdl:output message="tns:IOServiceDataForInvoiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IOServiceDataForInvoice_WithParameters">
+      <wsdl:input message="tns:IOServiceDataForInvoice_WithParametersSoapIn" />
+      <wsdl:output message="tns:IOServiceDataForInvoice_WithParametersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPostOrderTicket">
+      <wsdl:input message="tns:AddPostOrderTicketSoapIn" />
+      <wsdl:output message="tns:AddPostOrderTicketSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPostOrderTicket_WithParameters">
+      <wsdl:input message="tns:AddPostOrderTicket_WithParametersSoapIn" />
+      <wsdl:output message="tns:AddPostOrderTicket_WithParametersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPostOrderEmailInfo">
+      <wsdl:input message="tns:AddPostOrderEmailInfoSoapIn" />
+      <wsdl:output message="tns:AddPostOrderEmailInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPostOrderEmailInfo_WithParameters">
+      <wsdl:input message="tns:AddPostOrderEmailInfo_WithParametersSoapIn" />
+      <wsdl:output message="tns:AddPostOrderEmailInfo_WithParametersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RessellerData">
+      <wsdl:input message="tns:RessellerDataSoapIn" />
+      <wsdl:output message="tns:RessellerDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RessellerData_WithParameters">
+      <wsdl:input message="tns:RessellerData_WithParametersSoapIn" />
+      <wsdl:output message="tns:RessellerData_WithParametersSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IOServiceData">
+      <soap:operation soapAction="http://tempuri.org/IOServiceData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IOServiceData_WithParameters">
+      <soap:operation soapAction="http://tempuri.org/IOServiceData_WithParameters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IOServiceDataForInvoice">
+      <soap:operation soapAction="http://tempuri.org/IOServiceDataForInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IOServiceDataForInvoice_WithParameters">
+      <soap:operation soapAction="http://tempuri.org/IOServiceDataForInvoice_WithParameters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPostOrderTicket">
+      <soap:operation soapAction="http://tempuri.org/AddPostOrderTicket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPostOrderTicket_WithParameters">
+      <soap:operation soapAction="http://tempuri.org/AddPostOrderTicket_WithParameters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPostOrderEmailInfo">
+      <soap:operation soapAction="http://tempuri.org/AddPostOrderEmailInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPostOrderEmailInfo_WithParameters">
+      <soap:operation soapAction="http://tempuri.org/AddPostOrderEmailInfo_WithParameters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RessellerData">
+      <soap:operation soapAction="http://tempuri.org/RessellerData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RessellerData_WithParameters">
+      <soap:operation soapAction="http://tempuri.org/RessellerData_WithParameters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IOServiceData">
+      <soap12:operation soapAction="http://tempuri.org/IOServiceData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IOServiceData_WithParameters">
+      <soap12:operation soapAction="http://tempuri.org/IOServiceData_WithParameters" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IOServiceDataForInvoice">
+      <soap12:operation soapAction="http://tempuri.org/IOServiceDataForInvoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IOServiceDataForInvoice_WithParameters">
+      <soap12:operation soapAction="http://tempuri.org/IOServiceDataForInvoice_WithParameters" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPostOrderTicket">
+      <soap12:operation soapAction="http://tempuri.org/AddPostOrderTicket" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPostOrderTicket_WithParameters">
+      <soap12:operation soapAction="http://tempuri.org/AddPostOrderTicket_WithParameters" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPostOrderEmailInfo">
+      <soap12:operation soapAction="http://tempuri.org/AddPostOrderEmailInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPostOrderEmailInfo_WithParameters">
+      <soap12:operation soapAction="http://tempuri.org/AddPostOrderEmailInfo_WithParameters" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RessellerData">
+      <soap12:operation soapAction="http://tempuri.org/RessellerData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RessellerData_WithParameters">
+      <soap12:operation soapAction="http://tempuri.org/RessellerData_WithParameters" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://postservices.infinishops.com/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://postservices.infinishops.com/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

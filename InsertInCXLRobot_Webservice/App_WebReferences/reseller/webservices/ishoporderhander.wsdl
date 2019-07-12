@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="GetBizInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ResellerUID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="OrderID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CustomerID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Product" type="tns:ArrayOfProductDetail" />
+            <s:element minOccurs="0" maxOccurs="1" name="PayStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RefererID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfProductDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProductDetail" type="tns:ProductDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProductDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ProductCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Quantity" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderType" type="s1:char" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBizInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetBizInfoResult" type="tns:GetBizInfoResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetBizInfoResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ERRORCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ERRORDESC" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddMainDBOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ResellerID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResellerCustomerUID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResellerOrderID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddMainDBOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddMainDBOrderResult" type="tns:AddMainDBOrderResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AddMainDBOrderResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ERRORCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ERRORDESC" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="char">
+        <s:restriction base="s:unsignedShort" />
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetBizInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBizInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetBizInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBizInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddMainDBOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:AddMainDBOrder" />
+  </wsdl:message>
+  <wsdl:message name="AddMainDBOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:AddMainDBOrderResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IShopOrderHanderSoap">
+    <wsdl:operation name="GetBizInfo">
+      <wsdl:input message="tns:GetBizInfoSoapIn" />
+      <wsdl:output message="tns:GetBizInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMainDBOrder">
+      <wsdl:input message="tns:AddMainDBOrderSoapIn" />
+      <wsdl:output message="tns:AddMainDBOrderSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IShopOrderHanderSoap" type="tns:IShopOrderHanderSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBizInfo">
+      <soap:operation soapAction="http://tempuri.org/GetBizInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMainDBOrder">
+      <soap:operation soapAction="http://tempuri.org/AddMainDBOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IShopOrderHanderSoap12" type="tns:IShopOrderHanderSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBizInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetBizInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMainDBOrder">
+      <soap12:operation soapAction="http://tempuri.org/AddMainDBOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IShopOrderHander">
+    <wsdl:port name="IShopOrderHanderSoap" binding="tns:IShopOrderHanderSoap">
+      <soap:address location="http://webservices.reseller.com/common/ishoporderhander.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IShopOrderHanderSoap12" binding="tns:IShopOrderHanderSoap12">
+      <soap12:address location="http://webservices.reseller.com/common/ishoporderhander.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

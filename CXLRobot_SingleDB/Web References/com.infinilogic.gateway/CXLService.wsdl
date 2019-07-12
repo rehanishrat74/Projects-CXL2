@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://tempuri.org/CXL/Service1" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/CXL/Service1" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/CXL/Service1">
+      <s:element name="CXLProcessing">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreditCardNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IssueNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StartDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardExpiry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLResponseCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLMessage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agentAcquirer" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="rid" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="merchantloginid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerloginid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sender" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CXLProcessingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CXLProcessingResult" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLResponseCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CXLProcessingUpgrade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreditCardNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IssueNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StartDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardExpiry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLResponseCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLMessage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agentAcquirer" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="rid" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="merchantloginid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerloginid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sender" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CXLProcessingUpgradeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CXLProcessingUpgradeResult" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLResponseCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CXLProcessingWithCcv">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreditCardNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IssueNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StartDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardExpiry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLResponseCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLMessage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agentAcquirer" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="rid" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="merchantloginid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerloginid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sender" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ccv" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CXLProcessingWithCcvResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CXLProcessingWithCcvResult" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLResponseCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CXLProcessingWithCcvUpgrade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreditCardNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IssueNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StartDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardExpiry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLResponseCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLMessage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agentAcquirer" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="rid" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="merchantloginid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerloginid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sender" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ccv" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CXLProcessingWithCcvUpgradeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CXLProcessingWithCcvUpgradeResult" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLResponseCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CxlLiveTest">
+        <s:complexType />
+      </s:element>
+      <s:element name="CxlLiveTestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CxlLiveTestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CXLProcessingWith3dsecure">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreditCardNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IssueNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StartDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardExpiry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLResponseCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLMessage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agentAcquirer" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="rid" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="merchantloginid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerloginid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sender" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ccv" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="eci" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vts" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vav" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="threeid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CXLProcessingWith3dsecureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CXLProcessingWith3dsecureResult" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLResponseCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="CXLProcessingSoapIn">
+    <part name="parameters" element="s0:CXLProcessing" />
+  </message>
+  <message name="CXLProcessingSoapOut">
+    <part name="parameters" element="s0:CXLProcessingResponse" />
+  </message>
+  <message name="CXLProcessingUpgradeSoapIn">
+    <part name="parameters" element="s0:CXLProcessingUpgrade" />
+  </message>
+  <message name="CXLProcessingUpgradeSoapOut">
+    <part name="parameters" element="s0:CXLProcessingUpgradeResponse" />
+  </message>
+  <message name="CXLProcessingWithCcvSoapIn">
+    <part name="parameters" element="s0:CXLProcessingWithCcv" />
+  </message>
+  <message name="CXLProcessingWithCcvSoapOut">
+    <part name="parameters" element="s0:CXLProcessingWithCcvResponse" />
+  </message>
+  <message name="CXLProcessingWithCcvUpgradeSoapIn">
+    <part name="parameters" element="s0:CXLProcessingWithCcvUpgrade" />
+  </message>
+  <message name="CXLProcessingWithCcvUpgradeSoapOut">
+    <part name="parameters" element="s0:CXLProcessingWithCcvUpgradeResponse" />
+  </message>
+  <message name="CxlLiveTestSoapIn">
+    <part name="parameters" element="s0:CxlLiveTest" />
+  </message>
+  <message name="CxlLiveTestSoapOut">
+    <part name="parameters" element="s0:CxlLiveTestResponse" />
+  </message>
+  <message name="CXLProcessingWith3dsecureSoapIn">
+    <part name="parameters" element="s0:CXLProcessingWith3dsecure" />
+  </message>
+  <message name="CXLProcessingWith3dsecureSoapOut">
+    <part name="parameters" element="s0:CXLProcessingWith3dsecureResponse" />
+  </message>
+  <portType name="CXLServiceSoap">
+    <operation name="CXLProcessing">
+      <input message="s0:CXLProcessingSoapIn" />
+      <output message="s0:CXLProcessingSoapOut" />
+    </operation>
+    <operation name="CXLProcessing">
+      <input name="CXLProcessingUpgrade" message="s0:CXLProcessingUpgradeSoapIn" />
+      <output name="CXLProcessingUpgrade" message="s0:CXLProcessingUpgradeSoapOut" />
+    </operation>
+    <operation name="CXLProcessing">
+      <input name="CXLProcessingWithCcv" message="s0:CXLProcessingWithCcvSoapIn" />
+      <output name="CXLProcessingWithCcv" message="s0:CXLProcessingWithCcvSoapOut" />
+    </operation>
+    <operation name="CXLProcessing">
+      <input name="CXLProcessingWithCcvUpgrade" message="s0:CXLProcessingWithCcvUpgradeSoapIn" />
+      <output name="CXLProcessingWithCcvUpgrade" message="s0:CXLProcessingWithCcvUpgradeSoapOut" />
+    </operation>
+    <operation name="IfCXLLive">
+      <input name="CxlLiveTest" message="s0:CxlLiveTestSoapIn" />
+      <output name="CxlLiveTest" message="s0:CxlLiveTestSoapOut" />
+    </operation>
+    <operation name="CXLProcessing">
+      <input name="CXLProcessingWith3dsecure" message="s0:CXLProcessingWith3dsecureSoapIn" />
+      <output name="CXLProcessingWith3dsecure" message="s0:CXLProcessingWith3dsecureSoapOut" />
+    </operation>
+  </portType>
+  <binding name="CXLServiceSoap" type="s0:CXLServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="CXLProcessing">
+      <soap:operation soapAction="http://tempuri.org/CXL/Service1/CXLProcessing" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CXLProcessing">
+      <soap:operation soapAction="http://tempuri.org/CXL/Service1/CXLProcessingUpgrade" style="document" />
+      <input name="CXLProcessingUpgrade">
+        <soap:body use="literal" />
+      </input>
+      <output name="CXLProcessingUpgrade">
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CXLProcessing">
+      <soap:operation soapAction="http://tempuri.org/CXL/Service1/CXLProcessingWithCcv" style="document" />
+      <input name="CXLProcessingWithCcv">
+        <soap:body use="literal" />
+      </input>
+      <output name="CXLProcessingWithCcv">
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CXLProcessing">
+      <soap:operation soapAction="http://tempuri.org/CXL/Service1/CXLProcessingWithCcvUpgrade" style="document" />
+      <input name="CXLProcessingWithCcvUpgrade">
+        <soap:body use="literal" />
+      </input>
+      <output name="CXLProcessingWithCcvUpgrade">
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="IfCXLLive">
+      <soap:operation soapAction="http://tempuri.org/CXL/Service1/CxlLiveTest" style="document" />
+      <input name="CxlLiveTest">
+        <soap:body use="literal" />
+      </input>
+      <output name="CxlLiveTest">
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CXLProcessing">
+      <soap:operation soapAction="http://tempuri.org/CXL/Service1/CXLProcessingWith3dsecure" style="document" />
+      <input name="CXLProcessingWith3dsecure">
+        <soap:body use="literal" />
+      </input>
+      <output name="CXLProcessingWith3dsecure">
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="CXLService">
+    <port name="CXLServiceSoap" binding="s0:CXLServiceSoap">
+      <soap:address location="http://gateway.infinilogic.com/CXLService.asmx" />
+    </port>
+  </service>
+</definitions>

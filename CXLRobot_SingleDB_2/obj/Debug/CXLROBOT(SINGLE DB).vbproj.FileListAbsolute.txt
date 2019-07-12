@@ -1,0 +1,32 @@
+E:\CXLRobot_SingleDB\bin\WindowsGateWayCreditCard(Single_DB).exe.config
+E:\CXLRobot_SingleDB\obj\Debug\Interop.COMSVCSLib.dll
+E:\CXLRobot_SingleDB\obj\Debug\CXLROBOT(SINGLE DB).vbproj.ResolveComReference.cache
+E:\CXLRobot_SingleDB\obj\Debug\WindowsGateWayCreditCard(Single_DB).exe
+E:\CXLRobot_SingleDB\obj\Debug\WindowsGateWayCreditCard(Single_DB).pdb
+E:\CXLRobot_SingleDB\obj\Debug\ResolveAssemblyReference.cache
+E:\CXLRobot_SingleDB\obj\Debug\WindowsGateWayCreditCard.CXL.Form1.resources
+E:\CXLRobot_SingleDB\obj\Debug\CXLROBOT(SINGLE DB).vbproj.GenerateResource.Cache
+E:\CXLRobot_SingleDB\bin\WindowsGateWayCreditCard(Single_DB).exe
+E:\CXLRobot_SingleDB\bin\WindowsGateWayCreditCard(Single_DB).pdb
+E:\CXLRobot_SingleDB\bin\WindowsGateWayCreditCard(Single_DB).xml
+E:\CXLRobot_SingleDB\bin\BPtsPayment.dll
+E:\CXLRobot_SingleDB\bin\InfiniLogic.AccountsCentre.Common.dll
+E:\CXLRobot_SingleDB\bin\MySql.Data.dll
+E:\CXLRobot_SingleDB\bin\pwdsqlsrvdotnet.dll
+E:\CXLRobot_SingleDB\bin\rsaLibrary1.dll
+E:\CXLRobot_SingleDB\bin\InfiniLogic.AccountsCentre.Common.xml
+E:\CXLRobot_SingleDB\bin\Interop.COMSVCSLib.dll
+E:\CXLRobot_SingleDB\obj\Debug\WindowsGateWayCreditCard(Single_DB).xml
+D:\Projects\CXL\CXLRobot_SingleDB_2\bin\WindowsGateWayCreditCard(Single_DB).exe.config
+D:\Projects\CXL\CXLRobot_SingleDB_2\bin\WindowsGateWayCreditCard(Single_DB).exe
+D:\Projects\CXL\CXLRobot_SingleDB_2\bin\WindowsGateWayCreditCard(Single_DB).pdb
+D:\Projects\CXL\CXLRobot_SingleDB_2\bin\WindowsGateWayCreditCard(Single_DB).xml
+D:\Projects\CXL\CXLRobot_SingleDB_2\bin\Interop.COMSVCSLib.dll
+D:\Projects\CXL\CXLRobot_SingleDB_2\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\CXL\CXLRobot_SingleDB_2\obj\Debug\Interop.COMSVCSLib.dll
+D:\Projects\CXL\CXLRobot_SingleDB_2\obj\Debug\CXLROBOT(SINGLE DB).vbproj.ResolveComReference.cache
+D:\Projects\CXL\CXLRobot_SingleDB_2\obj\Debug\WindowsGateWayCreditCard.CXL.Form1.resources
+D:\Projects\CXL\CXLRobot_SingleDB_2\obj\Debug\CXLROBOT(SINGLE DB).vbproj.GenerateResource.Cache
+D:\Projects\CXL\CXLRobot_SingleDB_2\obj\Debug\WindowsGateWayCreditCard(Single_DB).exe
+D:\Projects\CXL\CXLRobot_SingleDB_2\obj\Debug\WindowsGateWayCreditCard(Single_DB).xml
+D:\Projects\CXL\CXLRobot_SingleDB_2\obj\Debug\WindowsGateWayCreditCard(Single_DB).pdb

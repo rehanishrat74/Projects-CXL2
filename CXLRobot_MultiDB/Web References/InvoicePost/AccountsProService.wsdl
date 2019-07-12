@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/AccountsProWS/Service1" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/AccountsProWS/Service1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/AccountsProWS/Service1">
+      <s:element name="CreateAccountsProUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserInfoStruct" type="tns:AccountsProUserInfoToCreate" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AccountsProUserInfoToCreate">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserPassword" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserEmail" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateAccountsProUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateAccountsProUserResult" type="tns:TransactionReport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TransactionReport">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MoreErrorDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateEmployeeIO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserInfoStruct" type="tns:EmployeeInfoToCreate" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EmployeeInfoToCreate">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MerchantId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerId" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateEmployeeIOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateEmployeeIOResult" type="tns:EmployeeTransactionReport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EmployeeTransactionReport">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EmployeeID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MoreErrorDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RefundRobot_PostCreditInvoice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MerchantID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreditInvoiceNo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RefundRobot_PostCreditInvoiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RefundRobot_PostCreditInvoiceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CXLRobot_PostInvoice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MerchantID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InvoiceNo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CXLRobot_PostInvoiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CXLRobot_PostInvoiceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateSupplierFromCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SupplierData" type="tns:SupplierInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SupplierInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MerchantID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SupplierName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telephone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateSupplierFromCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateSupplierFromCustomerResult" type="tns:SupplierFromCustomerResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SupplierFromCustomerResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SupplierID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MoreErrorDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateAccountsProUserSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateAccountsProUser" />
+  </wsdl:message>
+  <wsdl:message name="CreateAccountsProUserSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateAccountsProUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateEmployeeIOSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateEmployeeIO" />
+  </wsdl:message>
+  <wsdl:message name="CreateEmployeeIOSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateEmployeeIOResponse" />
+  </wsdl:message>
+  <wsdl:message name="RefundRobot_PostCreditInvoiceSoapIn">
+    <wsdl:part name="parameters" element="tns:RefundRobot_PostCreditInvoice" />
+  </wsdl:message>
+  <wsdl:message name="RefundRobot_PostCreditInvoiceSoapOut">
+    <wsdl:part name="parameters" element="tns:RefundRobot_PostCreditInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="CXLRobot_PostInvoiceSoapIn">
+    <wsdl:part name="parameters" element="tns:CXLRobot_PostInvoice" />
+  </wsdl:message>
+  <wsdl:message name="CXLRobot_PostInvoiceSoapOut">
+    <wsdl:part name="parameters" element="tns:CXLRobot_PostInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateSupplierFromCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateSupplierFromCustomer" />
+  </wsdl:message>
+  <wsdl:message name="CreateSupplierFromCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateSupplierFromCustomerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AccountsProServiceSoap">
+    <wsdl:operation name="CreateAccountsProUser">
+      <wsdl:input message="tns:CreateAccountsProUserSoapIn" />
+      <wsdl:output message="tns:CreateAccountsProUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateEmployeeIO">
+      <wsdl:input message="tns:CreateEmployeeIOSoapIn" />
+      <wsdl:output message="tns:CreateEmployeeIOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RefundRobot_PostCreditInvoice">
+      <wsdl:input message="tns:RefundRobot_PostCreditInvoiceSoapIn" />
+      <wsdl:output message="tns:RefundRobot_PostCreditInvoiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CXLRobot_PostInvoice">
+      <wsdl:input message="tns:CXLRobot_PostInvoiceSoapIn" />
+      <wsdl:output message="tns:CXLRobot_PostInvoiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSupplierFromCustomer">
+      <wsdl:input message="tns:CreateSupplierFromCustomerSoapIn" />
+      <wsdl:output message="tns:CreateSupplierFromCustomerSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AccountsProServiceSoap" type="tns:AccountsProServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="CreateAccountsProUser">
+      <soap:operation soapAction="http://tempuri.org/AccountsProWS/Service1/CreateAccountsProUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateEmployeeIO">
+      <soap:operation soapAction="http://tempuri.org/AccountsProWS/Service1/CreateEmployeeIO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefundRobot_PostCreditInvoice">
+      <soap:operation soapAction="http://tempuri.org/AccountsProWS/Service1/RefundRobot_PostCreditInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CXLRobot_PostInvoice">
+      <soap:operation soapAction="http://tempuri.org/AccountsProWS/Service1/CXLRobot_PostInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSupplierFromCustomer">
+      <soap:operation soapAction="http://tempuri.org/AccountsProWS/Service1/CreateSupplierFromCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AccountsProService">
+    <wsdl:port name="AccountsProServiceSoap" binding="tns:AccountsProServiceSoap">
+      <soap:address location="http://accountsws.accountscentre.com/AccountsProService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

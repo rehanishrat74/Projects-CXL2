@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="WindowsGateWayCreditCard_Single_DB__com_infinishops_webservices_webservices" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.infinishops.com/webservices.asmx</Value>
+    </Setting>
+    <Setting Name="WindowsGateWayCreditCard_Single_DB__com_webservices_ishops_OrderProcessing" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://ishops.webservices.com/order/orderprocessing.asmx</Value>
+    </Setting>
+    <Setting Name="WindowsGateWayCreditCard_Single_DB__InfiniPayPal_InfiniPayPalWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paypalgate.infinishops.com/InfiniPayPalWebService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

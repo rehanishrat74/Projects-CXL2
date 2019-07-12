@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[CXLROBOT.sln]
+SCC_Aux_Path = "\\netserver\SourceSafe Databases\CXLRobo"
+SCC_Project_Name = "$/Framework 2.0/MultiDB/CXLROBOT.root/CXLROBOT", KECAAAAA
+
+[CXLROBOT.vbproj]
+SCC_Aux_Path = "\\netserver\SourceSafe Databases\CXLRobo"
+SCC_Project_Name = "$/Framework 2.0/MultiDB/CXLROBOT.root/CXLROBOT", KECAAAAA

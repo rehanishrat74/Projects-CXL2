@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/AccountsProWS/Service1" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/AccountsProWS/Service1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/AccountsProWS/Service1">
+      <s:element name="GetBOM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ResellerID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="PackagesList" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBOMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetBOMResult" type="tns:PackagesListResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PackagesListResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PackageInfo" type="tns:ArrayOfPackagesBOMList" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorDesc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPackagesBOMList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PackagesBOMList" type="tns:PackagesBOMList" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PackagesBOMList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IsPackage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PackageCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemCode" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SetHTMLandLOGO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="html" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="logo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetHTMLandLOGOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetHTMLandLOGOResult" type="tns:ClassUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ClassUser">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ERRORCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ERRORDESC" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SetHTMLandLogoPayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Paid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetHTMLandLogoPaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetHTMLandLogoPaymentResult" type="tns:ClassUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateSalesOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="trackId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateSalesOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateSalesOrderResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetBOMSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBOM" />
+  </wsdl:message>
+  <wsdl:message name="GetBOMSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBOMResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetHTMLandLOGOSoapIn">
+    <wsdl:part name="parameters" element="tns:SetHTMLandLOGO" />
+  </wsdl:message>
+  <wsdl:message name="SetHTMLandLOGOSoapOut">
+    <wsdl:part name="parameters" element="tns:SetHTMLandLOGOResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetHTMLandLogoPaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:SetHTMLandLogoPayment" />
+  </wsdl:message>
+  <wsdl:message name="SetHTMLandLogoPaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:SetHTMLandLogoPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateSalesOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateSalesOrder" />
+  </wsdl:message>
+  <wsdl:message name="CreateSalesOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateSalesOrderResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AccountsProServiceSoap">
+    <wsdl:operation name="GetBOM">
+      <wsdl:input message="tns:GetBOMSoapIn" />
+      <wsdl:output message="tns:GetBOMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetHTMLandLOGO">
+      <wsdl:input message="tns:SetHTMLandLOGOSoapIn" />
+      <wsdl:output message="tns:SetHTMLandLOGOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetHTMLandLogoPayment">
+      <wsdl:input message="tns:SetHTMLandLogoPaymentSoapIn" />
+      <wsdl:output message="tns:SetHTMLandLogoPaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSalesOrder">
+      <wsdl:input message="tns:CreateSalesOrderSoapIn" />
+      <wsdl:output message="tns:CreateSalesOrderSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AccountsProServiceSoap" type="tns:AccountsProServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="GetBOM">
+      <soap:operation soapAction="http://tempuri.org/AccountsProWS/Service1/GetBOM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetHTMLandLOGO">
+      <soap:operation soapAction="http://tempuri.org/AccountsProWS/Service1/SetHTMLandLOGO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetHTMLandLogoPayment">
+      <soap:operation soapAction="http://tempuri.org/AccountsProWS/Service1/SetHTMLandLogoPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSalesOrder">
+      <soap:operation soapAction="http://tempuri.org/AccountsProWS/Service1/CreateSalesOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AccountsProService">
+    <wsdl:port name="AccountsProServiceSoap" binding="tns:AccountsProServiceSoap">
+      <soap:address location="http://accountsws.infinibiz.com/AccountsProService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

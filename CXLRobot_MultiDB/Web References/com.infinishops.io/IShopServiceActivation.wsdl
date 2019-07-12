@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="EnabledServices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="info" type="tns:ServiceInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ServiceInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsOrderSuccess" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PayMode" type="tns:PaymentMode" />
+          <s:element minOccurs="1" maxOccurs="1" name="DotNotSendDeclineEmail" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="PaymentMode">
+        <s:restriction base="s:string">
+          <s:enumeration value="CC" />
+          <s:enumeration value="CB" />
+          <s:enumeration value="BP" />
+          <s:enumeration value="PA" />
+          <s:enumeration value="CR" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="EnabledServicesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EnabledServicesResult" type="tns:EnabledServicesResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EnabledServicesResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ERRORCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ERRORDESC" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="EnabledServicesSoapIn">
+    <wsdl:part name="parameters" element="tns:EnabledServices" />
+  </wsdl:message>
+  <wsdl:message name="EnabledServicesSoapOut">
+    <wsdl:part name="parameters" element="tns:EnabledServicesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IShopServiceActivationSoap">
+    <wsdl:operation name="EnabledServices">
+      <wsdl:input message="tns:EnabledServicesSoapIn" />
+      <wsdl:output message="tns:EnabledServicesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IShopServiceActivationSoap" type="tns:IShopServiceActivationSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EnabledServices">
+      <soap:operation soapAction="http://tempuri.org/EnabledServices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IShopServiceActivationSoap12" type="tns:IShopServiceActivationSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="EnabledServices">
+      <soap12:operation soapAction="http://tempuri.org/EnabledServices" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IShopServiceActivation">
+    <wsdl:port name="IShopServiceActivationSoap" binding="tns:IShopServiceActivationSoap">
+      <soap:address location="http://io.infinishops.com/services/IShopServiceActivation.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IShopServiceActivationSoap12" binding="tns:IShopServiceActivationSoap12">
+      <soap12:address location="http://io.infinishops.com/services/IShopServiceActivation.asmx" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

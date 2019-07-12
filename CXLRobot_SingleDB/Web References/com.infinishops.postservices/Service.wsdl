@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="IOServiceData_WithParameters">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IOServiceData_WithParametersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IOServiceData_WithParametersResult" type="tns:ErrorCodeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ErrorCodeInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorDetailMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SuccessOrders" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FailureOrders" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CXLServiceData_WithParameters">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CXLServiceData_WithParametersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CXLServiceData_WithParametersResult" type="tns:ErrorCodeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IOServiceData">
+        <s:complexType />
+      </s:element>
+      <s:element name="IOServiceDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IOServiceDataResult" type="tns:ErrorCodeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CXLServiceData">
+        <s:complexType />
+      </s:element>
+      <s:element name="CXLServiceDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CXLServiceDataResult" type="tns:ErrorCodeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MainServiceMethod">
+        <s:complexType />
+      </s:element>
+      <s:element name="MainServiceMethodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MainServiceMethodResult" type="tns:ErrorCodeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IOServiceData_WithParametersSoapIn">
+    <wsdl:part name="parameters" element="tns:IOServiceData_WithParameters" />
+  </wsdl:message>
+  <wsdl:message name="IOServiceData_WithParametersSoapOut">
+    <wsdl:part name="parameters" element="tns:IOServiceData_WithParametersResponse" />
+  </wsdl:message>
+  <wsdl:message name="CXLServiceData_WithParametersSoapIn">
+    <wsdl:part name="parameters" element="tns:CXLServiceData_WithParameters" />
+  </wsdl:message>
+  <wsdl:message name="CXLServiceData_WithParametersSoapOut">
+    <wsdl:part name="parameters" element="tns:CXLServiceData_WithParametersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOServiceDataSoapIn">
+    <wsdl:part name="parameters" element="tns:IOServiceData" />
+  </wsdl:message>
+  <wsdl:message name="IOServiceDataSoapOut">
+    <wsdl:part name="parameters" element="tns:IOServiceDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="CXLServiceDataSoapIn">
+    <wsdl:part name="parameters" element="tns:CXLServiceData" />
+  </wsdl:message>
+  <wsdl:message name="CXLServiceDataSoapOut">
+    <wsdl:part name="parameters" element="tns:CXLServiceDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="MainServiceMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:MainServiceMethod" />
+  </wsdl:message>
+  <wsdl:message name="MainServiceMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:MainServiceMethodResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="IOServiceData_WithParameters">
+      <wsdl:input message="tns:IOServiceData_WithParametersSoapIn" />
+      <wsdl:output message="tns:IOServiceData_WithParametersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CXLServiceData_WithParameters">
+      <wsdl:input message="tns:CXLServiceData_WithParametersSoapIn" />
+      <wsdl:output message="tns:CXLServiceData_WithParametersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IOServiceData">
+      <wsdl:input message="tns:IOServiceDataSoapIn" />
+      <wsdl:output message="tns:IOServiceDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CXLServiceData">
+      <wsdl:input message="tns:CXLServiceDataSoapIn" />
+      <wsdl:output message="tns:CXLServiceDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MainServiceMethod">
+      <wsdl:input message="tns:MainServiceMethodSoapIn" />
+      <wsdl:output message="tns:MainServiceMethodSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IOServiceData_WithParameters">
+      <soap:operation soapAction="http://tempuri.org/IOServiceData_WithParameters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CXLServiceData_WithParameters">
+      <soap:operation soapAction="http://tempuri.org/CXLServiceData_WithParameters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IOServiceData">
+      <soap:operation soapAction="http://tempuri.org/IOServiceData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CXLServiceData">
+      <soap:operation soapAction="http://tempuri.org/CXLServiceData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MainServiceMethod">
+      <soap:operation soapAction="http://tempuri.org/MainServiceMethod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="IOServiceData_WithParameters">
+      <soap12:operation soapAction="http://tempuri.org/IOServiceData_WithParameters" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CXLServiceData_WithParameters">
+      <soap12:operation soapAction="http://tempuri.org/CXLServiceData_WithParameters" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IOServiceData">
+      <soap12:operation soapAction="http://tempuri.org/IOServiceData" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CXLServiceData">
+      <soap12:operation soapAction="http://tempuri.org/CXLServiceData" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MainServiceMethod">
+      <soap12:operation soapAction="http://tempuri.org/MainServiceMethod" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://postservices.infinishops.com/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://postservices.infinishops.com/Service.asmx" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

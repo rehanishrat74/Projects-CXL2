@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="EnabledServices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="info" type="tns:ServiceInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ServiceInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsOrderSuccess" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PayMode" type="tns:PaymentMode" />
+          <s:element minOccurs="1" maxOccurs="1" name="DotNotSendDeclineEmail" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="PaymentMode">
+        <s:restriction base="s:string">
+          <s:enumeration value="CC" />
+          <s:enumeration value="CB" />
+          <s:enumeration value="BP" />
+          <s:enumeration value="PA" />
+          <s:enumeration value="CR" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="EnabledServicesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EnabledServicesResult" type="tns:EnabledServicesResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EnabledServicesResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ERRORCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ERRORDESC" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetTicketText">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="info" type="tns:Ticket_Info" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Ticket_Info">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResellerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RssProdCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsPreActivationProduct" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsProductActivated" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsOrderPaid" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="TotalProductCount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InactiveProductCount" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetTicketTextResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTicketTextResult" type="tns:GetTicketTextResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetTicketTextResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorCode" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorDesc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TicketText" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TicketTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="color" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="category" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetTicketTextByTicketCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="info" type="tns:TicketCodeParams" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TicketCodeParams">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TicketCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AttributeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AttibuteValue" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RequiredColor" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResellerProdCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TotalProductCount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InactiveProductCount" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetTicketTextByTicketCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTicketTextByTicketCodeResult" type="tns:GetTicketTextResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TicketHandler">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="info" type="tns:TicketHandlerInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TicketHandlerInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PayMode" type="tns:PaymentMode" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsRepayment" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderAmount" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TicketHandlerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TicketHandlerResult" type="tns:TicketHandlerResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TicketHandlerResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ERRORCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ERRORDESC" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RepayTicketHandler_PayOnCredit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="info" type="tns:ServiceInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RepayTicketHandler_PayOnCreditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RepayTicketHandler_PayOnCreditResult" type="tns:TicketHandlerResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="EnabledServicesSoapIn">
+    <wsdl:part name="parameters" element="tns:EnabledServices" />
+  </wsdl:message>
+  <wsdl:message name="EnabledServicesSoapOut">
+    <wsdl:part name="parameters" element="tns:EnabledServicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTicketTextSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTicketText" />
+  </wsdl:message>
+  <wsdl:message name="GetTicketTextSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTicketTextResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTicketTextByTicketCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTicketTextByTicketCode" />
+  </wsdl:message>
+  <wsdl:message name="GetTicketTextByTicketCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTicketTextByTicketCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="TicketHandlerSoapIn">
+    <wsdl:part name="parameters" element="tns:TicketHandler" />
+  </wsdl:message>
+  <wsdl:message name="TicketHandlerSoapOut">
+    <wsdl:part name="parameters" element="tns:TicketHandlerResponse" />
+  </wsdl:message>
+  <wsdl:message name="RepayTicketHandler_PayOnCreditSoapIn">
+    <wsdl:part name="parameters" element="tns:RepayTicketHandler_PayOnCredit" />
+  </wsdl:message>
+  <wsdl:message name="RepayTicketHandler_PayOnCreditSoapOut">
+    <wsdl:part name="parameters" element="tns:RepayTicketHandler_PayOnCreditResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceActivationSoap">
+    <wsdl:operation name="EnabledServices">
+      <wsdl:input message="tns:EnabledServicesSoapIn" />
+      <wsdl:output message="tns:EnabledServicesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketText">
+      <wsdl:input message="tns:GetTicketTextSoapIn" />
+      <wsdl:output message="tns:GetTicketTextSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketTextByTicketCode">
+      <wsdl:input message="tns:GetTicketTextByTicketCodeSoapIn" />
+      <wsdl:output message="tns:GetTicketTextByTicketCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TicketHandler">
+      <wsdl:input message="tns:TicketHandlerSoapIn" />
+      <wsdl:output message="tns:TicketHandlerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RepayTicketHandler_PayOnCredit">
+      <wsdl:input message="tns:RepayTicketHandler_PayOnCreditSoapIn" />
+      <wsdl:output message="tns:RepayTicketHandler_PayOnCreditSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceActivationSoap" type="tns:ServiceActivationSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EnabledServices">
+      <soap:operation soapAction="http://tempuri.org/EnabledServices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketText">
+      <soap:operation soapAction="http://tempuri.org/GetTicketText" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketTextByTicketCode">
+      <soap:operation soapAction="http://tempuri.org/GetTicketTextByTicketCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketHandler">
+      <soap:operation soapAction="http://tempuri.org/TicketHandler" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RepayTicketHandler_PayOnCredit">
+      <soap:operation soapAction="http://tempuri.org/RepayTicketHandler_PayOnCredit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceActivationSoap12" type="tns:ServiceActivationSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="EnabledServices">
+      <soap12:operation soapAction="http://tempuri.org/EnabledServices" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketText">
+      <soap12:operation soapAction="http://tempuri.org/GetTicketText" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketTextByTicketCode">
+      <soap12:operation soapAction="http://tempuri.org/GetTicketTextByTicketCode" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketHandler">
+      <soap12:operation soapAction="http://tempuri.org/TicketHandler" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RepayTicketHandler_PayOnCredit">
+      <soap12:operation soapAction="http://tempuri.org/RepayTicketHandler_PayOnCredit" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceActivation">
+    <wsdl:port name="ServiceActivationSoap" binding="tns:ServiceActivationSoap">
+      <soap:address location="http://io.infinishops.com/services/ServiceActivation.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceActivationSoap12" binding="tns:ServiceActivationSoap12">
+      <soap12:address location="http://io.infinishops.com/services/ServiceActivation.asmx" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="CXLROBOT">
+</Property><Property Name="Solution File" Value="E:\CXLRobot_MultiDB\CXLROBOT.sln">
+</Property><Property Name="Date" Value="08 October 2010">
+</Property><Property Name="Time" Value="11:48">
+</Property></Properties><Event ErrorLevel="0" Project="CXLROBOT" Source="CXLROBOT.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="CXLROBOT" Source="CXLROBOT.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="CXLROBOT.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="CXLROBOT.sln" Description="Converted">
+</Event><Event ErrorLevel="3" Project="CXLROBOT" Source="Web References\com.infinibiz.webservices\Reference.vb" Description="Converted">
+</Event></UpgradeLog>

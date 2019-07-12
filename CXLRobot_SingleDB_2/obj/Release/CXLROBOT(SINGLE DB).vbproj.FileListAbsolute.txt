@@ -1,0 +1,38 @@
+E:\CXLRobot_SingleDB\bin\WindowsGateWayCreditCard(Single_DB).exe.config
+E:\CXLRobot_SingleDB\obj\Release\Interop.COMSVCSLib.dll
+E:\CXLRobot_SingleDB\obj\Release\CXLROBOT(SINGLE DB).vbproj.ResolveComReference.cache
+E:\CXLRobot_SingleDB\bin\WindowsGateWayCreditCard(Single_DB).exe
+E:\CXLRobot_SingleDB\bin\WindowsGateWayCreditCard(Single_DB).XmlSerializers.dll
+E:\CXLRobot_SingleDB\bin\WindowsGateWayCreditCard(Single_DB).xml
+E:\CXLRobot_SingleDB\bin\BPtsPayment.dll
+E:\CXLRobot_SingleDB\bin\InfiniLogic.AccountsCentre.Common.dll
+E:\CXLRobot_SingleDB\bin\MySql.Data.dll
+E:\CXLRobot_SingleDB\bin\pwdsqlsrvdotnet.dll
+E:\CXLRobot_SingleDB\bin\rsaLibrary1.dll
+E:\CXLRobot_SingleDB\bin\InfiniLogic.AccountsCentre.Common.xml
+E:\CXLRobot_SingleDB\bin\Interop.COMSVCSLib.dll
+E:\CXLRobot_SingleDB\obj\Release\ResolveAssemblyReference.cache
+E:\CXLRobot_SingleDB\obj\Release\WindowsGateWayCreditCard.CXL.Form1.resources
+E:\CXLRobot_SingleDB\obj\Release\CXLROBOT(SINGLE DB).vbproj.GenerateResource.Cache
+E:\CXLRobot_SingleDB\obj\Release\WindowsGateWayCreditCard(Single_DB).exe
+E:\CXLRobot_SingleDB\obj\Release\WindowsGateWayCreditCard(Single_DB).xml
+E:\CXLRobot_SingleDB\obj\Release\WindowsGateWayCreditCard(Single_DB).XmlSerializers.dll
+E:\CXLRobot_SingleDB_2\bin\WindowsGateWayCreditCard(Single_DB).exe.config
+E:\CXLRobot_SingleDB_2\obj\Release\Interop.COMSVCSLib.dll
+E:\CXLRobot_SingleDB_2\obj\Release\CXLROBOT(SINGLE DB).vbproj.ResolveComReference.cache
+E:\CXLRobot_SingleDB_2\obj\Release\WindowsGateWayCreditCard(Single_DB).exe
+E:\CXLRobot_SingleDB_2\obj\Release\WindowsGateWayCreditCard(Single_DB).xml
+E:\CXLRobot_SingleDB_2\obj\Release\WindowsGateWayCreditCard(Single_DB).XmlSerializers.dll
+D:\Projects\CXL\CXLRobot_SingleDB_2\bin\WindowsGateWayCreditCard(Single_DB).exe.config
+D:\Projects\CXL\CXLRobot_SingleDB_2\obj\Release\WindowsGateWayCreditCard(Single_DB).exe
+D:\Projects\CXL\CXLRobot_SingleDB_2\obj\Release\WindowsGateWayCreditCard(Single_DB).xml
+D:\Projects\CXL\CXLRobot_SingleDB_2\obj\Release\WindowsGateWayCreditCard(Single_DB).XmlSerializers.dll
+D:\Projects\CXL\CXLRobot_SingleDB_2\bin\WindowsGateWayCreditCard(Single_DB).exe
+D:\Projects\CXL\CXLRobot_SingleDB_2\bin\WindowsGateWayCreditCard(Single_DB).XmlSerializers.dll
+D:\Projects\CXL\CXLRobot_SingleDB_2\bin\WindowsGateWayCreditCard(Single_DB).xml
+D:\Projects\CXL\CXLRobot_SingleDB_2\bin\Interop.COMSVCSLib.dll
+D:\Projects\CXL\CXLRobot_SingleDB_2\obj\Release\ResolveAssemblyReference.cache
+D:\Projects\CXL\CXLRobot_SingleDB_2\obj\Release\WindowsGateWayCreditCard.CXL.Form1.resources
+D:\Projects\CXL\CXLRobot_SingleDB_2\obj\Release\CXLROBOT(SINGLE DB).vbproj.GenerateResource.Cache
+D:\Projects\CXL\CXLRobot_SingleDB_2\obj\Release\Interop.COMSVCSLib.dll
+D:\Projects\CXL\CXLRobot_SingleDB_2\obj\Release\CXLROBOT(SINGLE DB).vbproj.ResolveComReference.cache

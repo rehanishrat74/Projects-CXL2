@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://couponsystem.infinishops.com/EmailCoupon.asmx?wsdl" docRef="http://couponsystem.infinishops.com/EmailCoupon.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://couponsystem.infinishops.com/EmailCoupon.asmx" xmlns:q1="http://tempuri.org/couponsystem.infinishops.com/EmailCoupon" binding="q1:EmailCouponSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://couponsystem.infinishops.com/EmailCoupon.asmx" xmlns:q2="http://tempuri.org/couponsystem.infinishops.com/EmailCoupon" binding="q2:EmailCouponSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

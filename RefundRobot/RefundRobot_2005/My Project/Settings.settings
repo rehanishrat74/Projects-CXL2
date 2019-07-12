@@ -1,0 +1,45 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="Error_Email_Password" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ErrRefund</Value>
+    </Setting>
+    <Setting Name="DEFAULT_DATABASE" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">DBGateWay</Value>
+    </Setting>
+    <Setting Name="DEFAULT_SERVER" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Datacentre</Value>
+    </Setting>
+    <Setting Name="SQL_User_ID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">refunduser</Value>
+    </Setting>
+    <Setting Name="SQL_User_Password" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">taNg571Ue</Value>
+    </Setting>
+    <Setting Name="SMTPServer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">10.0.0.42</Value>
+    </Setting>
+    <Setting Name="RefundRobot_2005_InvoicePost_AccountsProService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://accountsws.accountscentre.com/AccountsProService.asmx</Value>
+    </Setting>
+    <Setting Name="Error_Email_ID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">saad@infinilogic.com</Value>
+    </Setting>
+    <Setting Name="Refund_Limit" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="RefundRobot_2005_com_infinilogic_gatewayrefund_CXLRefundService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://gatewayrefund.infinilogic.com/cxlRefundService.asmx</Value>
+    </Setting>
+    <Setting Name="Error_Email_ID_From" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">refund.errors@accountscentre.com</Value>
+    </Setting>
+    <Setting Name="SMTPServer_LOCAL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">192.168.1.66</Value>
+    </Setting>
+    <Setting Name="LOCAL_Mail_Server" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">TRUE</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

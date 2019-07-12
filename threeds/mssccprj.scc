@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[threeds.sln]
+SCC_Aux_Path = "\\netserver\SourceSafe Databases\CXLRobo"
+SCC_Project_Name = "$/threeds.root/threeds", ZXCAAAAA
+
+[threeds.vbproj]
+SCC_Aux_Path = "\\netserver\SourceSafe Databases\CXLRobo"
+SCC_Project_Name = "$/threeds.root/threeds", ZXCAAAAA

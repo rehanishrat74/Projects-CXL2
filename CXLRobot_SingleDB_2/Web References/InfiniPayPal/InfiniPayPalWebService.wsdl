@@ -1,0 +1,2298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s3="urn:ebay:apis:CoreComponentTypes" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="urn:ebay:api:PayPalAPI" xmlns:s4="urn:ebay:apis:EnhancedDataTypes" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s2="urn:ebay:apis:eBLBaseComponents" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="urn:ebay:api:PayPalAPI" />
+      <s:import namespace="urn:ebay:apis:eBLBaseComponents" />
+      <s:element name="MakeTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paypaID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paypalPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Envoirement" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cardType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CVV2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endMonth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endYear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="totalAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="moneyType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="invoiceID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MakeTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MakeTransactionResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MakeTransaction_Overleaded">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paypaID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paypalPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Envoirement" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cardType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CVV2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endMonth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endYear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="totalAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="moneyType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="invoiceID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lastname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Street" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PostCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CountryCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MakeTransaction_OverleadedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MakeTransaction_OverleadedResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExpressCheckout">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paypalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paypalPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Envoironment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReturnURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CancelURL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExpressCheckoutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExpressCheckoutResult" type="s1:SetExpressCheckoutResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MobileCheckout">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paypalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paypalPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Envoironment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReturnURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CancelURL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MobileCheckoutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MobileCheckoutResult" type="s1:SetMobileCheckoutResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCheckoutDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paypalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paypalPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Envoironment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCheckoutDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCheckoutDetailsResult" type="s1:GetExpressCheckoutDetailsResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DOExpressCheckoutFinal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paypalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paypalPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Envoirement" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PayerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentAmount" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PaymentAction" type="s2:PaymentActionCodeType" />
+            <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DOExpressCheckoutFinalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DOExpressCheckoutFinalResult" type="s1:DoExpressCheckoutPaymentResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DOMobileheckoutFinal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paypalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paypalPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Envoirement" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PayerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentAmount" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PaymentAction" type="s2:PaymentActionCodeType" />
+            <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DOMobileheckoutFinalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DOMobileheckoutFinalResult" type="s1:DoMobileCheckoutPaymentResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InstallCertificate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MIDentity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Certificate" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InstallCertificateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InstallCertificateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsCertificatInstalled">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paypaID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paypalPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Envoirement" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsCertificatInstalledResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsCertificatInstalledResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn:ebay:api:PayPalAPI">
+      <s:import namespace="urn:ebay:apis:eBLBaseComponents" />
+      <s:import namespace="urn:ebay:apis:CoreComponentTypes" />
+      <s:complexType name="SetExpressCheckoutResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SetMobileCheckoutResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BMManageButtonStatusResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BMButtonSearchResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" ref="s2:ButtonSearchResult" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="GetBillingAgreementCustomerDetailsResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:GetBillingAgreementCustomerDetailsResponseDetails" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BAUpdateResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:BAUpdateResponseDetails" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="GetBalanceResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Balance" type="s3:BasicAmountType" />
+              <s:element minOccurs="1" maxOccurs="1" name="BalanceTimeStamp" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="unbounded" name="BalanceHoldings" type="s3:BasicAmountType" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DoCaptureResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:DoCaptureResponseDetails" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="AddressVerifyResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="ConfirmationCode" type="s2:AddressStatusCodeType" />
+              <s:element minOccurs="1" maxOccurs="1" name="StreetMatch" type="s2:MatchStatusCodeType" />
+              <s:element minOccurs="0" maxOccurs="1" name="ZipMatch" type="s2:MatchStatusCodeType" />
+              <s:element minOccurs="0" maxOccurs="1" name="CountryCode" type="s2:CountryCodeType" />
+              <s:element minOccurs="0" maxOccurs="1" name="PayPalToken" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BMUpdateButtonResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Website" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="HostedButtonID" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="GetExpressCheckoutDetailsResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:GetExpressCheckoutDetailsResponseDetails" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="GetRecurringPaymentsProfileDetailsResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:GetRecurringPaymentsProfileDetailsResponseDetails" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CreateBillingAgreementResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="BillingAgreementID" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="GetTransactionDetailsResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:PaymentTransactionDetails" />
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:ThreeDSecureDetails" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DoAuthorizationResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="TransactionID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s3:BasicAmountType" />
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:AuthorizationInfo" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DoUATPAuthorizationResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:DoAuthorizationResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:UATPDetails" />
+              <s:element minOccurs="0" maxOccurs="1" name="AuthorizationCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvoiceID" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TransactionSearchResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" ref="s2:PaymentTransactions" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="UpdateAccessPermissionsResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DoMobileCheckoutPaymentResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:DoMobileCheckoutPaymentResponseDetails" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DoReauthorizationResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AuthorizationID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:AuthorizationInfo" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DoReferenceTransactionResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:DoReferenceTransactionResponseDetails" />
+              <s:element minOccurs="0" maxOccurs="1" name="FMFDetails" type="s2:FMFDetailsType" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BMCreateButtonResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Website" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="HostedButtonID" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DoExpressCheckoutPaymentResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:DoExpressCheckoutPaymentResponseDetails" />
+              <s:element minOccurs="0" maxOccurs="1" name="FMFDetails" type="s2:FMFDetailsType" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DoUATPExpressCheckoutPaymentResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:DoExpressCheckoutPaymentResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:UATPDetails" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SetCustomerBillingAgreementResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DoDirectPaymentResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s3:BasicAmountType" />
+              <s:element minOccurs="0" maxOccurs="1" name="AVSCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CVV2Code" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TransactionID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PendingReason" type="s2:PendingStatusCodeType" />
+              <s:element minOccurs="0" maxOccurs="1" name="PaymentStatus" type="s2:PaymentStatusCodeType" />
+              <s:element minOccurs="0" maxOccurs="1" name="FMFDetails" type="s2:FMFDetailsType" />
+              <s:element minOccurs="0" maxOccurs="1" name="ThreeDSecureResponse" type="s2:ThreeDSecureResponseType" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SetAuthFlowParamResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="GetMobileStatusResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="IsActivated" type="s:integer" />
+              <s:element minOccurs="0" maxOccurs="1" name="PaymentPending" type="s:integer" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="GetBoardingDetailsResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:GetBoardingDetailsResponseDetails" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="GetPalDetailsResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Pal" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Locale" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DoVoidResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AuthorizationID" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="MassPayResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DoNonReferencedCreditResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:DoNonReferencedCreditResponseDetails" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ManagePendingTransactionStatusResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="TransactionID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BMGetButtonDetailsResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Website" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="HostedButtonID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ButtonType" type="s2:ButtonTypeType" />
+              <s:element minOccurs="0" maxOccurs="1" name="ButtonCode" type="s2:ButtonCodeType" />
+              <s:element minOccurs="0" maxOccurs="1" name="ButtonSubType" type="s2:ButtonSubTypeType" />
+              <s:element minOccurs="0" maxOccurs="unbounded" name="ButtonVar" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="unbounded" name="OptionDetails" type="s1:OptionDetailsType" />
+              <s:element minOccurs="0" maxOccurs="unbounded" name="TextBox" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ButtonImage" type="s2:ButtonImageType" />
+              <s:element minOccurs="0" maxOccurs="1" name="ButtonImageURL" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="BuyNowText" type="s2:BuyNowTextType" />
+              <s:element minOccurs="0" maxOccurs="1" name="SubscribeText" type="s2:SubscribeTextType" />
+              <s:element minOccurs="0" maxOccurs="1" name="ButtonCountry" type="s2:CountryCodeType" />
+              <s:element minOccurs="0" maxOccurs="1" name="ButtonLanguage" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="OptionDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OptionName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OptionSelectionDetails" type="s1:OptionSelectionDetailsType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OptionSelectionDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OptionSelection" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Price" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CreateMobilePaymentResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="RefundTransactionResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="RefundTransactionID" nillable="true" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="NetRefundAmount" type="s3:BasicAmountType" />
+              <s:element minOccurs="0" maxOccurs="1" name="FeeRefundAmount" type="s3:BasicAmountType" />
+              <s:element minOccurs="0" maxOccurs="1" name="GrossRefundAmount" type="s3:BasicAmountType" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="UpdateRecurringPaymentsProfileResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:UpdateRecurringPaymentsProfileResponseDetails" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="GetAccessPermissionDetailsResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:GetAccessPermissionDetailsResponseDetails" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BillOutstandingAmountResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:BillOutstandingAmountResponseDetails" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BMSetInventoryResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="TransactionID" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CreateRecurringPaymentsProfileResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:CreateRecurringPaymentsProfileResponseDetails" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SetAccessPermissionsResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BMGetInventoryResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="HostedButtonID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TrackInv" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TrackPnl" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:ItemTrackingDetails" />
+              <s:element minOccurs="0" maxOccurs="1" name="OptionIndex" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="OptionName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="unbounded" ref="s2:OptionTrackingDetails" />
+              <s:element minOccurs="0" maxOccurs="1" name="SoldoutURL" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="unbounded" name="DigitalDownloadKeys" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="GetAuthDetailsResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:GetAuthDetailsResponseDetails" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ManageRecurringPaymentsProfileStatusResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:ManageRecurringPaymentsProfileStatusResponseDetails" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BillUserResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:BillUserResponseDetails" />
+              <s:element minOccurs="0" maxOccurs="1" name="FMFDetails" type="s2:FMFDetailsType" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="EnterBoardingResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:AbstractResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn:ebay:apis:eBLBaseComponents">
+      <s:import namespace="urn:ebay:apis:CoreComponentTypes" />
+      <s:import namespace="urn:ebay:apis:EnhancedDataTypes" />
+      <s:complexType name="AbstractResponseType" abstract="true">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Timestamp" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ack" type="s2:AckCodeType" />
+          <s:element minOccurs="0" maxOccurs="1" name="CorrelationID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Errors" type="s2:ErrorType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Version" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Build" type="s:string" />
+          <s:any minOccurs="0" maxOccurs="1" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="AckCodeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Success" />
+          <s:enumeration value="Failure" />
+          <s:enumeration value="Warning" />
+          <s:enumeration value="SuccessWithWarning" />
+          <s:enumeration value="FailureWithWarning" />
+          <s:enumeration value="CustomCode" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ErrorType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ShortMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LongMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:token" />
+          <s:element minOccurs="1" maxOccurs="1" name="SeverityCode" type="s2:SeverityCodeType" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ErrorParameters" type="s2:ErrorParameterType" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="SeverityCodeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Warning" />
+          <s:enumeration value="Error" />
+          <s:enumeration value="CustomCode" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ErrorParameterType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+        </s:sequence>
+        <s:attribute name="ParamID" type="s:string" />
+      </s:complexType>
+      <s:element name="ButtonSearchResult" type="s2:ButtonSearchResultType" />
+      <s:complexType name="ButtonSearchResultType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="HostedButtonID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ButtonType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifyDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBillingAgreementCustomerDetailsResponseDetails" type="s2:GetBillingAgreementCustomerDetailsResponseDetailsType" />
+      <s:complexType name="GetBillingAgreementCustomerDetailsResponseDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PayerInfo" type="s2:PayerInfoType" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillingAddress" type="s2:AddressType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PayerInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Payer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayerStatus" type="s2:PayPalUserStatusCodeType" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayerName" type="s2:PersonNameType" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayerCountry" type="s2:CountryCodeType" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayerBusiness" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s2:AddressType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactPhone" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="PayPalUserStatusCodeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="verified" />
+          <s:enumeration value="unverified" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="PersonNameType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Salutation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Suffix" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="CountryCodeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="AF" />
+          <s:enumeration value="AL" />
+          <s:enumeration value="DZ" />
+          <s:enumeration value="AS" />
+          <s:enumeration value="AD" />
+          <s:enumeration value="AO" />
+          <s:enumeration value="AI" />
+          <s:enumeration value="AQ" />
+          <s:enumeration value="AG" />
+          <s:enumeration value="AR" />
+          <s:enumeration value="AM" />
+          <s:enumeration value="AW" />
+          <s:enumeration value="AU" />
+          <s:enumeration value="AT" />
+          <s:enumeration value="AZ" />
+          <s:enumeration value="BS" />
+          <s:enumeration value="BH" />
+          <s:enumeration value="BD" />
+          <s:enumeration value="BB" />
+          <s:enumeration value="BY" />
+          <s:enumeration value="BE" />
+          <s:enumeration value="BZ" />
+          <s:enumeration value="BJ" />
+          <s:enumeration value="BM" />
+          <s:enumeration value="BT" />
+          <s:enumeration value="BO" />
+          <s:enumeration value="BA" />
+          <s:enumeration value="BW" />
+          <s:enumeration value="BV" />
+          <s:enumeration value="BR" />
+          <s:enumeration value="IO" />
+          <s:enumeration value="BN" />
+          <s:enumeration value="BG" />
+          <s:enumeration value="BF" />
+          <s:enumeration value="BI" />
+          <s:enumeration value="KH" />
+          <s:enumeration value="CM" />
+          <s:enumeration value="CA" />
+          <s:enumeration value="CV" />
+          <s:enumeration value="KY" />
+          <s:enumeration value="CF" />
+          <s:enumeration value="TD" />
+          <s:enumeration value="CL" />
+          <s:enumeration value="C2" />
+          <s:enumeration value="CN" />
+          <s:enumeration value="CX" />
+          <s:enumeration value="CC" />
+          <s:enumeration value="CO" />
+          <s:enumeration value="KM" />
+          <s:enumeration value="CG" />
+          <s:enumeration value="CD" />
+          <s:enumeration value="CK" />
+          <s:enumeration value="CR" />
+          <s:enumeration value="CI" />
+          <s:enumeration value="HR" />
+          <s:enumeration value="CU" />
+          <s:enumeration value="CY" />
+          <s:enumeration value="CZ" />
+          <s:enumeration value="DK" />
+          <s:enumeration value="DJ" />
+          <s:enumeration value="DM" />
+          <s:enumeration value="DO" />
+          <s:enumeration value="TP" />
+          <s:enumeration value="EC" />
+          <s:enumeration value="EG" />
+          <s:enumeration value="SV" />
+          <s:enumeration value="GQ" />
+          <s:enumeration value="ER" />
+          <s:enumeration value="EE" />
+          <s:enumeration value="ET" />
+          <s:enumeration value="FK" />
+          <s:enumeration value="FO" />
+          <s:enumeration value="FJ" />
+          <s:enumeration value="FI" />
+          <s:enumeration value="FR" />
+          <s:enumeration value="GF" />
+          <s:enumeration value="PF" />
+          <s:enumeration value="TF" />
+          <s:enumeration value="GA" />
+          <s:enumeration value="GM" />
+          <s:enumeration value="GE" />
+          <s:enumeration value="DE" />
+          <s:enumeration value="GH" />
+          <s:enumeration value="GI" />
+          <s:enumeration value="GR" />
+          <s:enumeration value="GL" />
+          <s:enumeration value="GD" />
+          <s:enumeration value="GP" />
+          <s:enumeration value="GU" />
+          <s:enumeration value="GT" />
+          <s:enumeration value="GN" />
+          <s:enumeration value="GW" />
+          <s:enumeration value="GY" />
+          <s:enumeration value="HT" />
+          <s:enumeration value="HM" />
+          <s:enumeration value="VA" />
+          <s:enumeration value="HN" />
+          <s:enumeration value="HK" />
+          <s:enumeration value="HU" />
+          <s:enumeration value="IS" />
+          <s:enumeration value="IN" />
+          <s:enumeration value="ID" />
+          <s:enumeration value="IR" />
+          <s:enumeration value="IQ" />
+          <s:enumeration value="IE" />
+          <s:enumeration value="IL" />
+          <s:enumeration value="IT" />
+          <s:enumeration value="JM" />
+          <s:enumeration value="JP" />
+          <s:enumeration value="JO" />
+          <s:enumeration value="KZ" />
+          <s:enumeration value="KE" />
+          <s:enumeration value="KI" />
+          <s:enumeration value="KP" />
+          <s:enumeration value="KR" />
+          <s:enumeration value="KW" />
+          <s:enumeration value="KG" />
+          <s:enumeration value="LA" />
+          <s:enumeration value="LV" />
+          <s:enumeration value="LB" />
+          <s:enumeration value="LS" />
+          <s:enumeration value="LR" />
+          <s:enumeration value="LY" />
+          <s:enumeration value="LI" />
+          <s:enumeration value="LT" />
+          <s:enumeration value="LU" />
+          <s:enumeration value="MO" />
+          <s:enumeration value="MK" />
+          <s:enumeration value="MG" />
+          <s:enumeration value="MW" />
+          <s:enumeration value="MY" />
+          <s:enumeration value="MV" />
+          <s:enumeration value="ML" />
+          <s:enumeration value="MT" />
+          <s:enumeration value="MH" />
+          <s:enumeration value="MQ" />
+          <s:enumeration value="MR" />
+          <s:enumeration value="MU" />
+          <s:enumeration value="YT" />
+          <s:enumeration value="MX" />
+          <s:enumeration value="FM" />
+          <s:enumeration value="MD" />
+          <s:enumeration value="MC" />
+          <s:enumeration value="MN" />
+          <s:enumeration value="MS" />
+          <s:enumeration value="MA" />
+          <s:enumeration value="MZ" />
+          <s:enumeration value="MM" />
+          <s:enumeration value="NA" />
+          <s:enumeration value="NR" />
+          <s:enumeration value="NP" />
+          <s:enumeration value="NL" />
+          <s:enumeration value="AN" />
+          <s:enumeration value="NC" />
+          <s:enumeration value="NZ" />
+          <s:enumeration value="NI" />
+          <s:enumeration value="NE" />
+          <s:enumeration value="NG" />
+          <s:enumeration value="NU" />
+          <s:enumeration value="NF" />
+          <s:enumeration value="MP" />
+          <s:enumeration value="NO" />
+          <s:enumeration value="OM" />
+          <s:enumeration value="PK" />
+          <s:enumeration value="PW" />
+          <s:enumeration value="PS" />
+          <s:enumeration value="PA" />
+          <s:enumeration value="PG" />
+          <s:enumeration value="PY" />
+          <s:enumeration value="PE" />
+          <s:enumeration value="PH" />
+          <s:enumeration value="PN" />
+          <s:enumeration value="PL" />
+          <s:enumeration value="PT" />
+          <s:enumeration value="PR" />
+          <s:enumeration value="QA" />
+          <s:enumeration value="RE" />
+          <s:enumeration value="RO" />
+          <s:enumeration value="RU" />
+          <s:enumeration value="RW" />
+          <s:enumeration value="SH" />
+          <s:enumeration value="KN" />
+          <s:enumeration value="LC" />
+          <s:enumeration value="PM" />
+          <s:enumeration value="VC" />
+          <s:enumeration value="WS" />
+          <s:enumeration value="SM" />
+          <s:enumeration value="ST" />
+          <s:enumeration value="SA" />
+          <s:enumeration value="SN" />
+          <s:enumeration value="SC" />
+          <s:enumeration value="SL" />
+          <s:enumeration value="SG" />
+          <s:enumeration value="SK" />
+          <s:enumeration value="SI" />
+          <s:enumeration value="SB" />
+          <s:enumeration value="SO" />
+          <s:enumeration value="ZA" />
+          <s:enumeration value="GS" />
+          <s:enumeration value="ES" />
+          <s:enumeration value="LK" />
+          <s:enumeration value="SD" />
+          <s:enumeration value="SR" />
+          <s:enumeration value="SJ" />
+          <s:enumeration value="SZ" />
+          <s:enumeration value="SE" />
+          <s:enumeration value="CH" />
+          <s:enumeration value="SY" />
+          <s:enumeration value="TW" />
+          <s:enumeration value="TJ" />
+          <s:enumeration value="TZ" />
+          <s:enumeration value="TH" />
+          <s:enumeration value="TG" />
+          <s:enumeration value="TK" />
+          <s:enumeration value="TO" />
+          <s:enumeration value="TT" />
+          <s:enumeration value="TN" />
+          <s:enumeration value="TR" />
+          <s:enumeration value="TM" />
+          <s:enumeration value="TC" />
+          <s:enumeration value="TV" />
+          <s:enumeration value="UG" />
+          <s:enumeration value="UA" />
+          <s:enumeration value="AE" />
+          <s:enumeration value="GB" />
+          <s:enumeration value="US" />
+          <s:enumeration value="UM" />
+          <s:enumeration value="UY" />
+          <s:enumeration value="UZ" />
+          <s:enumeration value="VU" />
+          <s:enumeration value="VE" />
+          <s:enumeration value="VN" />
+          <s:enumeration value="VG" />
+          <s:enumeration value="VI" />
+          <s:enumeration value="WF" />
+          <s:enumeration value="EH" />
+          <s:enumeration value="YE" />
+          <s:enumeration value="YU" />
+          <s:enumeration value="ZM" />
+          <s:enumeration value="ZW" />
+          <s:enumeration value="AA" />
+          <s:enumeration value="QM" />
+          <s:enumeration value="QN" />
+          <s:enumeration value="QO" />
+          <s:enumeration value="QP" />
+          <s:enumeration value="CS" />
+          <s:enumeration value="CustomCode" />
+          <s:enumeration value="GG" />
+          <s:enumeration value="IM" />
+          <s:enumeration value="JE" />
+          <s:enumeration value="TL" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="AddressType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CityName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StateOrProvince" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s2:CountryCodeType" />
+          <s:element minOccurs="0" maxOccurs="1" name="CountryName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressOwner" type="s2:AddressOwnerCodeType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExternalAddressID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InternationalName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InternationalStateAndCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InternationalStreet" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressStatus" type="s2:AddressStatusCodeType" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="AddressOwnerCodeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="PayPal" />
+          <s:enumeration value="eBay" />
+          <s:enumeration value="CustomCode" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="AddressStatusCodeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Confirmed" />
+          <s:enumeration value="Unconfirmed" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="BAUpdateResponseDetails" type="s2:BAUpdateResponseDetailsType" />
+      <s:complexType name="BAUpdateResponseDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BillingAgreementID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillingAgreementDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BillingAgreementStatus" type="s2:MerchantPullStatusCodeType" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillingAgreementCustom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayerInfo" type="s2:PayerInfoType" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillingAgreementMax" type="s3:BasicAmountType" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="MerchantPullStatusCodeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Active" />
+          <s:enumeration value="Canceled" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="CurrencyCodeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="AFA" />
+          <s:enumeration value="ALL" />
+          <s:enumeration value="DZD" />
+          <s:enumeration value="ADP" />
+          <s:enumeration value="AOA" />
+          <s:enumeration value="ARS" />
+          <s:enumeration value="AMD" />
+          <s:enumeration value="AWG" />
+          <s:enumeration value="AZM" />
+          <s:enumeration value="BSD" />
+          <s:enumeration value="BHD" />
+          <s:enumeration value="BDT" />
+          <s:enumeration value="BBD" />
+          <s:enumeration value="BYR" />
+          <s:enumeration value="BZD" />
+          <s:enumeration value="BMD" />
+          <s:enumeration value="BTN" />
+          <s:enumeration value="INR" />
+          <s:enumeration value="BOV" />
+          <s:enumeration value="BOB" />
+          <s:enumeration value="BAM" />
+          <s:enumeration value="BWP" />
+          <s:enumeration value="BRL" />
+          <s:enumeration value="BND" />
+          <s:enumeration value="BGL" />
+          <s:enumeration value="BGN" />
+          <s:enumeration value="BIF" />
+          <s:enumeration value="KHR" />
+          <s:enumeration value="CAD" />
+          <s:enumeration value="CVE" />
+          <s:enumeration value="KYD" />
+          <s:enumeration value="XAF" />
+          <s:enumeration value="CLF" />
+          <s:enumeration value="CLP" />
+          <s:enumeration value="CNY" />
+          <s:enumeration value="COP" />
+          <s:enumeration value="KMF" />
+          <s:enumeration value="CDF" />
+          <s:enumeration value="CRC" />
+          <s:enumeration value="HRK" />
+          <s:enumeration value="CUP" />
+          <s:enumeration value="CYP" />
+          <s:enumeration value="CZK" />
+          <s:enumeration value="DKK" />
+          <s:enumeration value="DJF" />
+          <s:enumeration value="DOP" />
+          <s:enumeration value="TPE" />
+          <s:enumeration value="ECV" />
+          <s:enumeration value="ECS" />
+          <s:enumeration value="EGP" />
+          <s:enumeration value="SVC" />
+          <s:enumeration value="ERN" />
+          <s:enumeration value="EEK" />
+          <s:enumeration value="ETB" />
+          <s:enumeration value="FKP" />
+          <s:enumeration value="FJD" />
+          <s:enumeration value="GMD" />
+          <s:enumeration value="GEL" />
+          <s:enumeration value="GHC" />
+          <s:enumeration value="GIP" />
+          <s:enumeration value="GTQ" />
+          <s:enumeration value="GNF" />
+          <s:enumeration value="GWP" />
+          <s:enumeration value="GYD" />
+          <s:enumeration value="HTG" />
+          <s:enumeration value="HNL" />
+          <s:enumeration value="HKD" />
+          <s:enumeration value="HUF" />
+          <s:enumeration value="ISK" />
+          <s:enumeration value="IDR" />
+          <s:enumeration value="IRR" />
+          <s:enumeration value="IQD" />
+          <s:enumeration value="ILS" />
+          <s:enumeration value="JMD" />
+          <s:enumeration value="JPY" />
+          <s:enumeration value="JOD" />
+          <s:enumeration value="KZT" />
+          <s:enumeration value="KES" />
+          <s:enumeration value="AUD" />
+          <s:enumeration value="KPW" />
+          <s:enumeration value="KRW" />
+          <s:enumeration value="KWD" />
+          <s:enumeration value="KGS" />
+          <s:enumeration value="LAK" />
+          <s:enumeration value="LVL" />
+          <s:enumeration value="LBP" />
+          <s:enumeration value="LSL" />
+          <s:enumeration value="LRD" />
+          <s:enumeration value="LYD" />
+          <s:enumeration value="CHF" />
+          <s:enumeration value="LTL" />
+          <s:enumeration value="MOP" />
+          <s:enumeration value="MKD" />
+          <s:enumeration value="MGF" />
+          <s:enumeration value="MWK" />
+          <s:enumeration value="MYR" />
+          <s:enumeration value="MVR" />
+          <s:enumeration value="MTL" />
+          <s:enumeration value="EUR" />
+          <s:enumeration value="MRO" />
+          <s:enumeration value="MUR" />
+          <s:enumeration value="MXN" />
+          <s:enumeration value="MXV" />
+          <s:enumeration value="MDL" />
+          <s:enumeration value="MNT" />
+          <s:enumeration value="XCD" />
+          <s:enumeration value="MZM" />
+          <s:enumeration value="MMK" />
+          <s:enumeration value="ZAR" />
+          <s:enumeration value="NAD" />
+          <s:enumeration value="NPR" />
+          <s:enumeration value="ANG" />
+          <s:enumeration value="XPF" />
+          <s:enumeration value="NZD" />
+          <s:enumeration value="NIO" />
+          <s:enumeration value="NGN" />
+          <s:enumeration value="NOK" />
+          <s:enumeration value="OMR" />
+          <s:enumeration value="PKR" />
+          <s:enumeration value="PAB" />
+          <s:enumeration value="PGK" />
+          <s:enumeration value="PYG" />
+          <s:enumeration value="PEN" />
+          <s:enumeration value="PHP" />
+          <s:enumeration value="PLN" />
+          <s:enumeration value="USD" />
+          <s:enumeration value="QAR" />
+          <s:enumeration value="ROL" />
+          <s:enumeration value="RUB" />
+          <s:enumeration value="RUR" />
+          <s:enumeration value="RWF" />
+          <s:enumeration value="SHP" />
+          <s:enumeration value="WST" />
+          <s:enumeration value="STD" />
+          <s:enumeration value="SAR" />
+          <s:enumeration value="SCR" />
+          <s:enumeration value="SLL" />
+          <s:enumeration value="SGD" />
+          <s:enumeration value="SKK" />
+          <s:enumeration value="SIT" />
+          <s:enumeration value="SBD" />
+          <s:enumeration value="SOS" />
+          <s:enumeration value="LKR" />
+          <s:enumeration value="SDD" />
+          <s:enumeration value="SRG" />
+          <s:enumeration value="SZL" />
+          <s:enumeration value="SEK" />
+          <s:enumeration value="SYP" />
+          <s:enumeration value="TWD" />
+          <s:enumeration value="TJS" />
+          <s:enumeration value="TZS" />
+          <s:enumeration value="THB" />
+          <s:enumeration value="XOF" />
+          <s:enumeration value="TOP" />
+          <s:enumeration value="TTD" />
+          <s:enumeration value="TND" />
+          <s:enumeration value="TRL" />
+          <s:enumeration value="TMM" />
+          <s:enumeration value="UGX" />
+          <s:enumeration value="UAH" />
+          <s:enumeration value="AED" />
+          <s:enumeration value="GBP" />
+          <s:enumeration value="USS" />
+          <s:enumeration value="USN" />
+          <s:enumeration value="UYU" />
+          <s:enumeration value="UZS" />
+          <s:enumeration value="VUV" />
+          <s:enumeration value="VEB" />
+          <s:enumeration value="VND" />
+          <s:enumeration value="MAD" />
+          <s:enumeration value="YER" />
+          <s:enumeration value="YUM" />
+          <s:enumeration value="ZMK" />
+          <s:enumeration value="ZWD" />
+          <s:enumeration value="CustomCode" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="DoCaptureResponseDetails" type="s2:DoCaptureResponseDetailsType" />
+      <s:complexType name="DoCaptureResponseDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AuthorizationID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentInfo" type="s2:PaymentInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PaymentInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EbayTransactionID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ParentTransactionID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceiptID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransactionType" type="s2:PaymentTransactionCodeType" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentType" type="s2:PaymentCodeType" />
+          <s:element minOccurs="1" maxOccurs="1" name="PaymentDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="GrossAmount" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="FeeAmount" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="SettleAmount" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxAmount" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExchangeRate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PaymentStatus" type="s2:PaymentStatusCodeType" />
+          <s:element minOccurs="0" maxOccurs="1" name="PendingReason" type="s2:PendingStatusCodeType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReasonCode" type="s2:ReversalReasonCodeType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShippingMethod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProtectionEligibility" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipHandleAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipDiscount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InsuranceAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="PaymentTransactionCodeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="none" />
+          <s:enumeration value="web-accept" />
+          <s:enumeration value="cart" />
+          <s:enumeration value="send-money" />
+          <s:enumeration value="subscr-failed" />
+          <s:enumeration value="subscr-cancel" />
+          <s:enumeration value="subscr-payment" />
+          <s:enumeration value="subscr-signup" />
+          <s:enumeration value="subscr-eot" />
+          <s:enumeration value="subscr-modify" />
+          <s:enumeration value="mercht-pmt" />
+          <s:enumeration value="mass-pay" />
+          <s:enumeration value="virtual-terminal" />
+          <s:enumeration value="express-checkout" />
+          <s:enumeration value="credit" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="PaymentCodeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="none" />
+          <s:enumeration value="echeck" />
+          <s:enumeration value="instant" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="PaymentStatusCodeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Completed" />
+          <s:enumeration value="Failed" />
+          <s:enumeration value="Pending" />
+          <s:enumeration value="Denied" />
+          <s:enumeration value="Refunded" />
+          <s:enumeration value="Reversed" />
+          <s:enumeration value="Canceled-Reversal" />
+          <s:enumeration value="Processed" />
+          <s:enumeration value="Partially-Refunded" />
+          <s:enumeration value="Voided" />
+          <s:enumeration value="Expired" />
+          <s:enumeration value="In-Progress" />
+          <s:enumeration value="Created" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="PendingStatusCodeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="none" />
+          <s:enumeration value="echeck" />
+          <s:enumeration value="intl" />
+          <s:enumeration value="verify" />
+          <s:enumeration value="address" />
+          <s:enumeration value="unilateral" />
+          <s:enumeration value="other" />
+          <s:enumeration value="upgrade" />
+          <s:enumeration value="multi-currency" />
+          <s:enumeration value="authorization" />
+          <s:enumeration value="order" />
+          <s:enumeration value="payment-review" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="ReversalReasonCodeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="none" />
+          <s:enumeration value="chargeback" />
+          <s:enumeration value="guarantee" />
+          <s:enumeration value="buyer-complaint" />
+          <s:enumeration value="refund" />
+          <s:enumeration value="other" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="MatchStatusCodeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Matched" />
+          <s:enumeration value="Unmatched" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetExpressCheckoutDetailsResponseDetails" type="s2:GetExpressCheckoutDetailsResponseDetailsType" />
+      <s:complexType name="GetExpressCheckoutDetailsResponseDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayerInfo" type="s2:PayerInfoType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Custom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvoiceID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillingAgreementAcceptedStatus" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="RedirectRequired" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillingAddress" type="s2:AddressType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Note" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckoutStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayPalAdjustment" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentDetails" type="s2:PaymentDetailsType" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserSelectedOptions" type="s2:UserSelectedOptionType" />
+          <s:element minOccurs="0" maxOccurs="1" name="GiftMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GiftReceiptEnable" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GiftWrapName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GiftWrapAmount" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="BuyerMarketingEmail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SurveyQuestion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SurveyChoiceSelected" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PaymentDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OrderTotal" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemTotal" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShippingTotal" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="HandlingTotal" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxTotal" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Custom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvoiceID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ButtonSource" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NotifyURL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipToAddress" type="s2:AddressType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShippingMethod" type="s2:ShippingServiceCodeType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProfileAddressChangeDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PaymentDetailsItem" type="s2:PaymentDetailsItemType" />
+          <s:element minOccurs="0" maxOccurs="1" name="InsuranceTotal" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShippingDiscount" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="InsuranceOptionOffered" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AllowedPaymentMethod" type="s2:AllowedPaymentMethodType" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnhancedPaymentData" type="s4:EnhancedPaymentDataType" />
+          <s:element minOccurs="0" maxOccurs="1" name="SellerDetails" type="s2:SellerDetailsType" />
+          <s:element minOccurs="0" maxOccurs="1" name="NoteText" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ShippingServiceCodeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="UPSGround" />
+          <s:enumeration value="UPS3rdDay" />
+          <s:enumeration value="UPS2ndDay" />
+          <s:enumeration value="UPSNextDay" />
+          <s:enumeration value="USPSPriority" />
+          <s:enumeration value="USPSParcel" />
+          <s:enumeration value="USPSMedia" />
+          <s:enumeration value="USPSFirstClass" />
+          <s:enumeration value="ShippingMethodStandard" />
+          <s:enumeration value="ShippingMethodExpress" />
+          <s:enumeration value="ShippingMethodNextDay" />
+          <s:enumeration value="USPSExpressMail" />
+          <s:enumeration value="USPSGround" />
+          <s:enumeration value="Download" />
+          <s:enumeration value="WillCall_Or_Pickup" />
+          <s:enumeration value="CustomCode" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="PaymentDetailsItemType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Quantity" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tax" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="EbayItemPaymentDetailsItem" type="s2:EbayItemPaymentDetailsItemType" />
+          <s:element minOccurs="0" maxOccurs="1" name="PromoCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductCategory" type="s2:ProductCategoryType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemWeight" type="s3:MeasureType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemLength" type="s3:MeasureType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemWidth" type="s3:MeasureType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemHeight" type="s3:MeasureType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemURL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnhancedItemData" type="s4:EnhancedItemDataType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EbayItemPaymentDetailsItemType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ItemNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AuctionTransactionId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CartID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ProductCategoryType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Other" />
+          <s:enumeration value="Airlines" />
+          <s:enumeration value="Antiques" />
+          <s:enumeration value="Art" />
+          <s:enumeration value="Cameras_Photos" />
+          <s:enumeration value="Cars_Boats_Vehicles_Parts" />
+          <s:enumeration value="CellPhones_Telecom" />
+          <s:enumeration value="Coins_PaperMoney" />
+          <s:enumeration value="Collectibles" />
+          <s:enumeration value="Computers_Networking" />
+          <s:enumeration value="ConsumerElectronics" />
+          <s:enumeration value="Jewelry_Watches" />
+          <s:enumeration value="MusicalInstruments" />
+          <s:enumeration value="RealEstate" />
+          <s:enumeration value="SportsMemorabilia_Cards_FanShop" />
+          <s:enumeration value="Stamps" />
+          <s:enumeration value="Tickets" />
+          <s:enumeration value="Travels" />
+          <s:enumeration value="Gambling" />
+          <s:enumeration value="Alcohol" />
+          <s:enumeration value="Tobacco" />
+          <s:enumeration value="MoneyTransfer" />
+          <s:enumeration value="Software" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="AllowedPaymentMethodType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Default" />
+          <s:enumeration value="InstantPaymentOnly" />
+          <s:enumeration value="AnyFundingSource" />
+          <s:enumeration value="InstantFundingSource" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="SellerDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SellerId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SellerUserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SellerRegistrationDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserSelectedOptionType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ShippingCalculationMode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InsuranceOptionSelected" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShippingOptionIsDefault" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShippingOptionAmount" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShippingOptionName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetRecurringPaymentsProfileDetailsResponseDetails" type="s2:GetRecurringPaymentsProfileDetailsResponseDetailsType" />
+      <s:complexType name="GetRecurringPaymentsProfileDetailsResponseDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ProfileID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProfileStatus" type="s2:RecurringPaymentsProfileStatusType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AutoBillOutstandingAmount" type="s2:AutoBillType" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxFailedPayments" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="RecurringPaymentsProfileDetails" type="s2:RecurringPaymentsProfileDetailsType" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrentRecurringPaymentsPeriod" type="s2:BillingPeriodDetailsType" />
+          <s:element minOccurs="0" maxOccurs="1" name="RecurringPaymentsSummary" type="s2:RecurringPaymentsSummaryType" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreditCard" type="s2:CreditCardDetailsType" />
+          <s:element minOccurs="0" maxOccurs="1" name="TrialRecurringPaymentsPeriod" type="s2:BillingPeriodDetailsType" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegularRecurringPaymentsPeriod" type="s2:BillingPeriodDetailsType" />
+          <s:element minOccurs="0" maxOccurs="1" name="TrialAmountPaid" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegularAmountPaid" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="AggregateAmount" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="AggregateOptionalAmount" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="FinalPaymentDueDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="RecurringPaymentsProfileStatusType">
+        <s:restriction base="s:string">
+          <s:enumeration value="ActiveProfile" />
+          <s:enumeration value="PendingProfile" />
+          <s:enumeration value="CancelledProfile" />
+          <s:enumeration value="ExpiredProfile" />
+          <s:enumeration value="SuspendedProfile" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="AutoBillType">
+        <s:restriction base="s:string">
+          <s:enumeration value="NoAutoBill" />
+          <s:enumeration value="AddToNextBilling" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="RecurringPaymentsProfileDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SubscriberName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubscriberShippingAddress" type="s2:AddressType" />
+          <s:element minOccurs="1" maxOccurs="1" name="BillingStartDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProfileReference" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BillingPeriodDetailsType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="BillingPeriod" type="s2:BillingPeriodType" />
+          <s:element minOccurs="1" maxOccurs="1" name="BillingFrequency" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TotalBillingCycles" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShippingAmount" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxAmount" type="s3:BasicAmountType" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="BillingPeriodType">
+        <s:restriction base="s:string">
+          <s:enumeration value="NoBillingPeriodType" />
+          <s:enumeration value="Day" />
+          <s:enumeration value="Week" />
+          <s:enumeration value="SemiMonth" />
+          <s:enumeration value="Month" />
+          <s:enumeration value="Year" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="RecurringPaymentsSummaryType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NextBillingDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberCyclesCompleted" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberCyclesRemaining" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="OutstandingBalance" type="s3:BasicAmountType" />
+          <s:element minOccurs="1" maxOccurs="1" name="FailedPaymentCount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastPaymentDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastPaymentAmount" type="s3:BasicAmountType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CreditCardDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CreditCardType" type="s2:CreditCardTypeType" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreditCardNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExpMonth" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExpYear" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardOwner" type="s2:PayerInfoType" />
+          <s:element minOccurs="0" maxOccurs="1" name="CVV2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StartMonth" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="StartYear" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="IssueNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ThreeDSecureRequest" type="s2:ThreeDSecureRequestType" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="CreditCardTypeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Visa" />
+          <s:enumeration value="MasterCard" />
+          <s:enumeration value="Discover" />
+          <s:enumeration value="Amex" />
+          <s:enumeration value="Switch" />
+          <s:enumeration value="Solo" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ThreeDSecureRequestType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Eci3ds" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cavv" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Xid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MpiVendor3ds" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AuthStatus3ds" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PaymentTransactionDetails" type="s2:PaymentTransactionType" />
+      <s:complexType name="PaymentTransactionType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ReceiverInfo" type="s2:ReceiverInfoType" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayerInfo" type="s2:PayerInfoType" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentInfo" type="s2:PaymentInfoType" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentItemInfo" type="s2:PaymentItemInfoType" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserSelectedOptions" type="s2:UserSelectedOptionType" />
+          <s:element minOccurs="0" maxOccurs="1" name="GiftMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GiftReceipt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GiftWrapName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GiftWrapAmount" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="BuyerEmailOptIn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SurveyQuestion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SurveyChoiceSelected" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ReceiverInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Business" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Receiver" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceiverID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PaymentItemInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="InvoiceID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Custom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Memo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SalesTax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PaymentItem" type="s2:PaymentItemType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Subscription" type="s2:SubscriptionInfoType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Auction" type="s2:AuctionInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PaymentItemType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Quantity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SalesTax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShippingAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HandlingAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Options" type="s2:OptionType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OptionType">
+        <s:attribute name="name" type="s:string" />
+        <s:attribute name="value" type="s:string" />
+      </s:complexType>
+      <s:complexType name="SubscriptionInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SubscriptionID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubscriptionDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="EffectiveDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="RetryTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Recurrences" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Terms" type="s2:SubscriptionTermsType" />
+        </s:sequence>
+        <s:attribute name="reattempt" type="s:string" />
+        <s:attribute name="recurring" type="s:string" />
+      </s:complexType>
+      <s:complexType name="SubscriptionTermsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s3:BasicAmountType" />
+        </s:sequence>
+        <s:attribute name="period" type="s:string" />
+      </s:complexType>
+      <s:complexType name="AuctionInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BuyerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClosingDate" type="s:dateTime" />
+        </s:sequence>
+        <s:attribute name="multiItem" type="s:string" />
+      </s:complexType>
+      <s:element name="ThreeDSecureDetails" type="s2:ThreeDSecureInfoType" />
+      <s:complexType name="ThreeDSecureInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ThreeDSecureRequest" type="s2:ThreeDSecureRequestType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ThreeDSecureResponse" type="s2:ThreeDSecureResponseType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ThreeDSecureResponseType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Vpas" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EciSubmitted3DS" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AuthorizationInfo" type="s2:AuthorizationInfoType" />
+      <s:complexType name="AuthorizationInfoType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PaymentStatus" type="s2:PaymentStatusCodeType" />
+          <s:element minOccurs="0" maxOccurs="1" name="PendingReason" type="s2:PendingStatusCodeType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProtectionEligibility" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UATPDetails" type="s2:UATPDetailsType" />
+      <s:complexType name="UATPDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UATPNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExpMonth" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExpYear" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PaymentTransactions" type="s2:PaymentTransactionSearchResultType" />
+      <s:complexType name="PaymentTransactionSearchResultType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Timestamp" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Timezone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Payer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayerDisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GrossAmount" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="FeeAmount" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="NetAmount" type="s3:BasicAmountType" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DoMobileCheckoutPaymentResponseDetails" type="s2:DoMobileCheckoutPaymentResponseDetailsType" />
+      <s:complexType name="DoMobileCheckoutPaymentResponseDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Custom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvoiceID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayerInfo" type="s2:PayerInfoType" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentInfo" type="s2:PaymentInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DoReferenceTransactionResponseDetails" type="s2:DoReferenceTransactionResponseDetailsType" />
+      <s:complexType name="DoReferenceTransactionResponseDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BillingAgreementID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentInfo" type="s2:PaymentInfoType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="AVSCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CVV2Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FMFDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AcceptFilters" type="s2:ArrayOfRiskFilterDetailsType" />
+          <s:element minOccurs="0" maxOccurs="1" name="PendingFilters" type="s2:ArrayOfRiskFilterDetailsType" />
+          <s:element minOccurs="0" maxOccurs="1" name="DenyFilters" type="s2:ArrayOfRiskFilterDetailsType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReportFilters" type="s2:ArrayOfRiskFilterDetailsType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRiskFilterDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Filters" type="s2:RiskFilterDetailsType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RiskFilterDetailsType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DoExpressCheckoutPaymentResponseDetails" type="s2:DoExpressCheckoutPaymentResponseDetailsType" />
+      <s:complexType name="DoExpressCheckoutPaymentResponseDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentInfo" type="s2:PaymentInfoType" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillingAgreementID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RedirectRequired" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Note" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SuccessPageRedirectRequested" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserSelectedOptions" type="s2:UserSelectedOptionType" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBoardingDetailsResponseDetails" type="s2:GetBoardingDetailsResponseDetailsType" />
+      <s:complexType name="GetBoardingDetailsResponseDetailsType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s2:BoardingStatusType" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastUpdated" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reason" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProgramName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProgramCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CampaignID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserWithdrawalLimit" type="s2:UserWithdrawalLimitTypeType" />
+          <s:element minOccurs="0" maxOccurs="1" name="PartnerCustom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountOwner" type="s2:PayerInfoType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="s2:APICredentialsType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConfigureAPIs" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmailVerificationStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VettingStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankAccountVerificationStatus" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="BoardingStatusType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Unknown" />
+          <s:enumeration value="Completed" />
+          <s:enumeration value="Cancelled" />
+          <s:enumeration value="Pending" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="UserWithdrawalLimitTypeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Unknown" />
+          <s:enumeration value="Limited" />
+          <s:enumeration value="Unlimited" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="APICredentialsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Signature" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Certificate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="s2:APIAuthenticationType" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="APIAuthenticationType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Auth-None" />
+          <s:enumeration value="Cert" />
+          <s:enumeration value="Sign" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="DoNonReferencedCreditResponseDetails" type="s2:DoNonReferencedCreditResponseDetailsType" />
+      <s:complexType name="DoNonReferencedCreditResponseDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ButtonTypeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="BUYNOW" />
+          <s:enumeration value="CART" />
+          <s:enumeration value="GIFTCERTIFICATE" />
+          <s:enumeration value="SUBSCRIBE" />
+          <s:enumeration value="DONATE" />
+          <s:enumeration value="UNSUBSCRIBE" />
+          <s:enumeration value="VIEWCART" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="ButtonCodeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="HOSTED" />
+          <s:enumeration value="ENCRYPTED" />
+          <s:enumeration value="CLEARTEXT" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="ButtonSubTypeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="PRODUCTS" />
+          <s:enumeration value="SERVICES" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="ButtonImageType">
+        <s:restriction base="s:string">
+          <s:enumeration value="REG" />
+          <s:enumeration value="SML" />
+          <s:enumeration value="CC" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="BuyNowTextType">
+        <s:restriction base="s:string">
+          <s:enumeration value="BUYNOW" />
+          <s:enumeration value="PAYNOW" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="SubscribeTextType">
+        <s:restriction base="s:string">
+          <s:enumeration value="BUYNOW" />
+          <s:enumeration value="SUBSCRIBE" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="UpdateRecurringPaymentsProfileResponseDetails" type="s2:UpdateRecurringPaymentsProfileResponseDetailsType" />
+      <s:complexType name="UpdateRecurringPaymentsProfileResponseDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ProfileID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAccessPermissionDetailsResponseDetails" type="s2:GetAccessPermissionDetailsResponseDetailsType" />
+      <s:complexType name="GetAccessPermissionDetailsResponseDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AccessPermissionName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AccessPermissionStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayerID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="BillOutstandingAmountResponseDetails" type="s2:BillOutstandingAmountResponseDetailsType" />
+      <s:complexType name="BillOutstandingAmountResponseDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ProfileID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateRecurringPaymentsProfileResponseDetails" type="s2:CreateRecurringPaymentsProfileResponseDetailsType" />
+      <s:complexType name="CreateRecurringPaymentsProfileResponseDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ProfileID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProfileStatus" type="s2:RecurringPaymentsProfileStatusType" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DCCProcessorResponse" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DCCReturnCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ItemTrackingDetails" type="s2:ItemTrackingDetailsType" />
+      <s:complexType name="ItemTrackingDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ItemNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemQty" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemQtyDelta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemAlert" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemCost" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="OptionTrackingDetails" type="s2:OptionTrackingDetailsType" />
+      <s:complexType name="OptionTrackingDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OptionNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionQty" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionSelect" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionQtyDelta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionAlert" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionCost" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAuthDetailsResponseDetails" type="s2:GetAuthDetailsResponseDetailsType" />
+      <s:complexType name="GetAuthDetailsResponseDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayerID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ManageRecurringPaymentsProfileStatusResponseDetails" type="s2:ManageRecurringPaymentsProfileStatusResponseDetailsType" />
+      <s:complexType name="ManageRecurringPaymentsProfileStatusResponseDetailsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ProfileID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="BillUserResponseDetails" type="s2:MerchantPullPaymentResponseType" />
+      <s:complexType name="MerchantPullPaymentResponseType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PayerInfo" type="s2:PayerInfoType" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentInfo" type="s2:PaymentInfoType" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantPullInfo" type="s2:MerchantPullInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MerchantPullInfoType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MpStatus" type="s2:MerchantPullStatusCodeType" />
+          <s:element minOccurs="0" maxOccurs="1" name="MpMax" type="s3:BasicAmountType" />
+          <s:element minOccurs="0" maxOccurs="1" name="MpCustom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Desc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Invoice" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Custom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentSourceID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="PaymentActionCodeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Authorization" />
+          <s:enumeration value="Sale" />
+          <s:enumeration value="Order" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn:ebay:apis:CoreComponentTypes">
+      <s:import namespace="urn:ebay:apis:eBLBaseComponents" />
+      <s:complexType name="BasicAmountType">
+        <s:simpleContent>
+          <s:extension base="s:string">
+            <s:attribute name="currencyID" type="s2:CurrencyCodeType" use="required" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:complexType name="MeasureType">
+        <s:simpleContent>
+          <s:extension base="s:double">
+            <s:attribute name="unit" type="s:token" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn:ebay:apis:EnhancedDataTypes">
+      <s:complexType name="EnhancedItemDataType" />
+      <s:complexType name="EnhancedPaymentDataType" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="MakeTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:MakeTransaction" />
+  </wsdl:message>
+  <wsdl:message name="MakeTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:MakeTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="MakeTransaction_OverleadedSoapIn">
+    <wsdl:part name="parameters" element="tns:MakeTransaction_Overleaded" />
+  </wsdl:message>
+  <wsdl:message name="MakeTransaction_OverleadedSoapOut">
+    <wsdl:part name="parameters" element="tns:MakeTransaction_OverleadedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExpressCheckoutSoapIn">
+    <wsdl:part name="parameters" element="tns:ExpressCheckout" />
+  </wsdl:message>
+  <wsdl:message name="ExpressCheckoutSoapOut">
+    <wsdl:part name="parameters" element="tns:ExpressCheckoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="MobileCheckoutSoapIn">
+    <wsdl:part name="parameters" element="tns:MobileCheckout" />
+  </wsdl:message>
+  <wsdl:message name="MobileCheckoutSoapOut">
+    <wsdl:part name="parameters" element="tns:MobileCheckoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCheckoutDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCheckoutDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetCheckoutDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCheckoutDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DOExpressCheckoutFinalSoapIn">
+    <wsdl:part name="parameters" element="tns:DOExpressCheckoutFinal" />
+  </wsdl:message>
+  <wsdl:message name="DOExpressCheckoutFinalSoapOut">
+    <wsdl:part name="parameters" element="tns:DOExpressCheckoutFinalResponse" />
+  </wsdl:message>
+  <wsdl:message name="DOMobileheckoutFinalSoapIn">
+    <wsdl:part name="parameters" element="tns:DOMobileheckoutFinal" />
+  </wsdl:message>
+  <wsdl:message name="DOMobileheckoutFinalSoapOut">
+    <wsdl:part name="parameters" element="tns:DOMobileheckoutFinalResponse" />
+  </wsdl:message>
+  <wsdl:message name="InstallCertificateSoapIn">
+    <wsdl:part name="parameters" element="tns:InstallCertificate" />
+  </wsdl:message>
+  <wsdl:message name="InstallCertificateSoapOut">
+    <wsdl:part name="parameters" element="tns:InstallCertificateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsCertificatInstalledSoapIn">
+    <wsdl:part name="parameters" element="tns:IsCertificatInstalled" />
+  </wsdl:message>
+  <wsdl:message name="IsCertificatInstalledSoapOut">
+    <wsdl:part name="parameters" element="tns:IsCertificatInstalledResponse" />
+  </wsdl:message>
+  <wsdl:portType name="InfiniPayPalWebServiceSoap">
+    <wsdl:operation name="MakeTransaction">
+      <wsdl:input message="tns:MakeTransactionSoapIn" />
+      <wsdl:output message="tns:MakeTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MakeTransaction_Overleaded">
+      <wsdl:input message="tns:MakeTransaction_OverleadedSoapIn" />
+      <wsdl:output message="tns:MakeTransaction_OverleadedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExpressCheckout">
+      <wsdl:input message="tns:ExpressCheckoutSoapIn" />
+      <wsdl:output message="tns:ExpressCheckoutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MobileCheckout">
+      <wsdl:input message="tns:MobileCheckoutSoapIn" />
+      <wsdl:output message="tns:MobileCheckoutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckoutDetails">
+      <wsdl:input message="tns:GetCheckoutDetailsSoapIn" />
+      <wsdl:output message="tns:GetCheckoutDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DOExpressCheckoutFinal">
+      <wsdl:input message="tns:DOExpressCheckoutFinalSoapIn" />
+      <wsdl:output message="tns:DOExpressCheckoutFinalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DOMobileheckoutFinal">
+      <wsdl:input message="tns:DOMobileheckoutFinalSoapIn" />
+      <wsdl:output message="tns:DOMobileheckoutFinalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InstallCertificate">
+      <wsdl:input message="tns:InstallCertificateSoapIn" />
+      <wsdl:output message="tns:InstallCertificateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ISCertInstalled">
+      <wsdl:input name="IsCertificatInstalled" message="tns:IsCertificatInstalledSoapIn" />
+      <wsdl:output name="IsCertificatInstalled" message="tns:IsCertificatInstalledSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InfiniPayPalWebServiceSoap" type="tns:InfiniPayPalWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MakeTransaction">
+      <soap:operation soapAction="http://tempuri.org/MakeTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MakeTransaction_Overleaded">
+      <soap:operation soapAction="http://tempuri.org/MakeTransaction_Overleaded" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExpressCheckout">
+      <soap:operation soapAction="http://tempuri.org/ExpressCheckout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MobileCheckout">
+      <soap:operation soapAction="http://tempuri.org/MobileCheckout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckoutDetails">
+      <soap:operation soapAction="http://tempuri.org/GetCheckoutDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DOExpressCheckoutFinal">
+      <soap:operation soapAction="http://tempuri.org/DOExpressCheckoutFinal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DOMobileheckoutFinal">
+      <soap:operation soapAction="http://tempuri.org/DOMobileheckoutFinal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InstallCertificate">
+      <soap:operation soapAction="http://tempuri.org/InstallCertificate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISCertInstalled">
+      <soap:operation soapAction="http://tempuri.org/IsCertificatInstalled" style="document" />
+      <wsdl:input name="IsCertificatInstalled">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="IsCertificatInstalled">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="InfiniPayPalWebServiceSoap12" type="tns:InfiniPayPalWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MakeTransaction">
+      <soap12:operation soapAction="http://tempuri.org/MakeTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MakeTransaction_Overleaded">
+      <soap12:operation soapAction="http://tempuri.org/MakeTransaction_Overleaded" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExpressCheckout">
+      <soap12:operation soapAction="http://tempuri.org/ExpressCheckout" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MobileCheckout">
+      <soap12:operation soapAction="http://tempuri.org/MobileCheckout" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckoutDetails">
+      <soap12:operation soapAction="http://tempuri.org/GetCheckoutDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DOExpressCheckoutFinal">
+      <soap12:operation soapAction="http://tempuri.org/DOExpressCheckoutFinal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DOMobileheckoutFinal">
+      <soap12:operation soapAction="http://tempuri.org/DOMobileheckoutFinal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InstallCertificate">
+      <soap12:operation soapAction="http://tempuri.org/InstallCertificate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISCertInstalled">
+      <soap12:operation soapAction="http://tempuri.org/IsCertificatInstalled" style="document" />
+      <wsdl:input name="IsCertificatInstalled">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="IsCertificatInstalled">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InfiniPayPalWebService">
+    <wsdl:port name="InfiniPayPalWebServiceSoap" binding="tns:InfiniPayPalWebServiceSoap">
+      <soap:address location="http://paypalgate.infinishops.com/InfiniPayPalWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="InfiniPayPalWebServiceSoap12" binding="tns:InfiniPayPalWebServiceSoap12">
+      <soap12:address location="http://paypalgate.infinishops.com/InfiniPayPalWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

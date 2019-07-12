@@ -1,0 +1,1853 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SendEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mFrom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mTo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mBody" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strBCC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCC" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Retry" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_ICRG">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LoginURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LoginID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_ICRGResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_ICRGResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_ISOD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="XML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_ISODResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_ISODResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_MPBW">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LoginURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LoginID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BidID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BidDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BidWonDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Detail" type="tns:ArrayOfBidDetail" />
+            <s:element minOccurs="0" maxOccurs="1" name="PAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CouponInfo" type="tns:ArrayOfCouponDetail" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBidDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BidDetail" type="tns:BidDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BidDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Services" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Quantity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BidPrice" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCouponDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CouponDetail" type="tns:CouponDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CouponDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CouponNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderHereLink" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SendEmail_MPBWResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_MPBWResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RCBP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AmountBilled" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RCBPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_RCBPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_MPDA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SalesOrderLink" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LoginURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LoginID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BidWonDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Detail" type="tns:ArrayOfBidDetail" />
+            <s:element minOccurs="0" maxOccurs="1" name="PAmount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_MPDAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_MPDAResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_ICCD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServicesInformation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_ICCDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_ICCDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RCCP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RCCPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_RCCPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_EQTE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Body" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Product" type="tns:ArrayOfProductDetail" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfProductDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProductDetail" type="tns:ProductDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProductDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderHereLink" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MoreInfoLink" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SendEmail_EQTEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_EQTEResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_AEMP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LoginID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_AEMPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_AEMPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RATH">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthorizationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RATHResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_RATHResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RAPV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SupplierName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LoginID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RAPVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_RAPVResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_APVD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SupplierName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_APVDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_APVDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_UPFL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LoginID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Street" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Town" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PostCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_UPFLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_UPFLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_SURL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_SURLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_SURLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RREG">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LogPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RREGResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_RREGResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RDLA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LogPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResellerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderAmount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RDLAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_RDLAResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RDNL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LogPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResellerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderAmount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RDNLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_RDNLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RLEX">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LogPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResellerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderAmount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RLEXResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_RLEXResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RCLP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LogPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResellerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderAmount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RCLPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_RCLPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RCRG">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LogPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResellerURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LoginID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhoneNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServicesInformation" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RCRGResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_RCRGResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RCRR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LogPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResellerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LoginID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServicesInformation" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RCRRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_RCRRResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RACT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LogPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResellerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantWebURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LoginID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhoneNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServicesInformation" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RACTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_RACTResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_ROAC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LogPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResellerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantWebURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LoginID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhoneNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServicesInformation" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_ROACResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_ROACResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RPAR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LogPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RPARResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_RPARResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RPAC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LogPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceInformation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LiveID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RPACResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_RPACResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RPAN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LogPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceInformation" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RPANResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_RPANResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RAPI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LogPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceInformation" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RAPIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_RAPIResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RDRC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LogPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DomainName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceInformation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LiveID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RDRCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_RDRCResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_COAE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LogPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessLink" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CDetail" type="tns:ArrayOfCouponProductDetail" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCouponProductDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CouponProductDetail" type="tns:CouponProductDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CouponProductDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CouponNo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SendEmail_COAEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_COAEResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_COAP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LogPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessLink" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CDetail" type="tns:ArrayOfCouponProductDetail" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_COAPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_COAPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_IOPA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LogPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LoginID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyValue" type="tns:ArrayOfKeyValueInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfKeyValueInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="KeyValueInfo" type="tns:KeyValueInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="KeyValueInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SendEmail_IOPAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendEmail_IOPAResult" type="tns:SendEmail_IOPAResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SendEmail_IOPAResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorDesc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SendEmail_BSPC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LogPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CDetail" type="tns:ArrayOfCouponProductDetail" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_BSPCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmail_BSPCResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RAUC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LogPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StartDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CloseDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_RAUCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendEmail_RAUCResult" type="tns:SendEmail_Response" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SendEmail_Response">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorDesc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SendEmail_SCCO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerUID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail_SCCOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendEmail_SCCOResult" type="tns:SendEmail_Response" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnableService_Error">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="To_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BCC_EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LogPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResellerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResellerCustomerUID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsOrderSuccess" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnableService_ErrorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnableService_ErrorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_ICRGSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_ICRG" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_ICRGSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_ICRGResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_ISODSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_ISOD" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_ISODSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_ISODResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_MPBWSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_MPBW" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_MPBWSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_MPBWResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RCBPSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_RCBP" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RCBPSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_RCBPResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_MPDASoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_MPDA" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_MPDASoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_MPDAResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_ICCDSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_ICCD" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_ICCDSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_ICCDResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RCCPSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_RCCP" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RCCPSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_RCCPResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_EQTESoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_EQTE" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_EQTESoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_EQTEResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_AEMPSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_AEMP" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_AEMPSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_AEMPResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RATHSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_RATH" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RATHSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_RATHResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RAPVSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_RAPV" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RAPVSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_RAPVResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_APVDSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_APVD" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_APVDSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_APVDResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_UPFLSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_UPFL" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_UPFLSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_UPFLResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_SURLSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_SURL" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_SURLSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_SURLResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RREGSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_RREG" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RREGSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_RREGResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RDLASoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_RDLA" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RDLASoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_RDLAResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RDNLSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_RDNL" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RDNLSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_RDNLResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RLEXSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_RLEX" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RLEXSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_RLEXResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RCLPSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_RCLP" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RCLPSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_RCLPResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RCRGSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_RCRG" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RCRGSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_RCRGResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RCRRSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_RCRR" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RCRRSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_RCRRResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RACTSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_RACT" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RACTSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_RACTResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_ROACSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_ROAC" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_ROACSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_ROACResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RPARSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_RPAR" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RPARSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_RPARResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RPACSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_RPAC" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RPACSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_RPACResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RPANSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_RPAN" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RPANSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_RPANResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RAPISoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_RAPI" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RAPISoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_RAPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RDRCSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_RDRC" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RDRCSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_RDRCResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_COAESoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_COAE" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_COAESoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_COAEResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_COAPSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_COAP" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_COAPSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_COAPResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_IOPASoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_IOPA" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_IOPASoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_IOPAResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_BSPCSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_BSPC" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_BSPCSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_BSPCResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RAUCSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_RAUC" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_RAUCSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_RAUCResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_SCCOSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail_SCCO" />
+  </wsdl:message>
+  <wsdl:message name="SendEmail_SCCOSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmail_SCCOResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnableService_ErrorSoapIn">
+    <wsdl:part name="parameters" element="tns:EnableService_Error" />
+  </wsdl:message>
+  <wsdl:message name="EnableService_ErrorSoapOut">
+    <wsdl:part name="parameters" element="tns:EnableService_ErrorResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SendEmailSoap">
+    <wsdl:operation name="SendEmail">
+      <wsdl:input message="tns:SendEmailSoapIn" />
+      <wsdl:output message="tns:SendEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_ICRG">
+      <wsdl:input message="tns:SendEmail_ICRGSoapIn" />
+      <wsdl:output message="tns:SendEmail_ICRGSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_ISOD">
+      <wsdl:input message="tns:SendEmail_ISODSoapIn" />
+      <wsdl:output message="tns:SendEmail_ISODSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_MPBW">
+      <wsdl:input message="tns:SendEmail_MPBWSoapIn" />
+      <wsdl:output message="tns:SendEmail_MPBWSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RCBP">
+      <wsdl:input message="tns:SendEmail_RCBPSoapIn" />
+      <wsdl:output message="tns:SendEmail_RCBPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_MPDA">
+      <wsdl:input message="tns:SendEmail_MPDASoapIn" />
+      <wsdl:output message="tns:SendEmail_MPDASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_ICCD">
+      <wsdl:input message="tns:SendEmail_ICCDSoapIn" />
+      <wsdl:output message="tns:SendEmail_ICCDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RCCP">
+      <wsdl:input message="tns:SendEmail_RCCPSoapIn" />
+      <wsdl:output message="tns:SendEmail_RCCPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_EQTE">
+      <wsdl:input message="tns:SendEmail_EQTESoapIn" />
+      <wsdl:output message="tns:SendEmail_EQTESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_AEMP">
+      <wsdl:input message="tns:SendEmail_AEMPSoapIn" />
+      <wsdl:output message="tns:SendEmail_AEMPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RATH">
+      <wsdl:input message="tns:SendEmail_RATHSoapIn" />
+      <wsdl:output message="tns:SendEmail_RATHSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RAPV">
+      <wsdl:input message="tns:SendEmail_RAPVSoapIn" />
+      <wsdl:output message="tns:SendEmail_RAPVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_APVD">
+      <wsdl:input message="tns:SendEmail_APVDSoapIn" />
+      <wsdl:output message="tns:SendEmail_APVDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_UPFL">
+      <wsdl:input message="tns:SendEmail_UPFLSoapIn" />
+      <wsdl:output message="tns:SendEmail_UPFLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_SURL">
+      <wsdl:input message="tns:SendEmail_SURLSoapIn" />
+      <wsdl:output message="tns:SendEmail_SURLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RREG">
+      <wsdl:input message="tns:SendEmail_RREGSoapIn" />
+      <wsdl:output message="tns:SendEmail_RREGSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RDLA">
+      <wsdl:input message="tns:SendEmail_RDLASoapIn" />
+      <wsdl:output message="tns:SendEmail_RDLASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RDNL">
+      <wsdl:input message="tns:SendEmail_RDNLSoapIn" />
+      <wsdl:output message="tns:SendEmail_RDNLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RLEX">
+      <wsdl:input message="tns:SendEmail_RLEXSoapIn" />
+      <wsdl:output message="tns:SendEmail_RLEXSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RCLP">
+      <wsdl:input message="tns:SendEmail_RCLPSoapIn" />
+      <wsdl:output message="tns:SendEmail_RCLPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RCRG">
+      <wsdl:input message="tns:SendEmail_RCRGSoapIn" />
+      <wsdl:output message="tns:SendEmail_RCRGSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RCRR">
+      <wsdl:input message="tns:SendEmail_RCRRSoapIn" />
+      <wsdl:output message="tns:SendEmail_RCRRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RACT">
+      <wsdl:input message="tns:SendEmail_RACTSoapIn" />
+      <wsdl:output message="tns:SendEmail_RACTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_ROAC">
+      <wsdl:input message="tns:SendEmail_ROACSoapIn" />
+      <wsdl:output message="tns:SendEmail_ROACSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RPAR">
+      <wsdl:input message="tns:SendEmail_RPARSoapIn" />
+      <wsdl:output message="tns:SendEmail_RPARSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RPAC">
+      <wsdl:input message="tns:SendEmail_RPACSoapIn" />
+      <wsdl:output message="tns:SendEmail_RPACSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RPAN">
+      <wsdl:input message="tns:SendEmail_RPANSoapIn" />
+      <wsdl:output message="tns:SendEmail_RPANSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RAPI">
+      <wsdl:input message="tns:SendEmail_RAPISoapIn" />
+      <wsdl:output message="tns:SendEmail_RAPISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RDRC">
+      <wsdl:input message="tns:SendEmail_RDRCSoapIn" />
+      <wsdl:output message="tns:SendEmail_RDRCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_COAE">
+      <wsdl:input message="tns:SendEmail_COAESoapIn" />
+      <wsdl:output message="tns:SendEmail_COAESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_COAP">
+      <wsdl:input message="tns:SendEmail_COAPSoapIn" />
+      <wsdl:output message="tns:SendEmail_COAPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_IOPA">
+      <wsdl:input message="tns:SendEmail_IOPASoapIn" />
+      <wsdl:output message="tns:SendEmail_IOPASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_BSPC">
+      <wsdl:input message="tns:SendEmail_BSPCSoapIn" />
+      <wsdl:output message="tns:SendEmail_BSPCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RAUC">
+      <wsdl:input message="tns:SendEmail_RAUCSoapIn" />
+      <wsdl:output message="tns:SendEmail_RAUCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_SCCO">
+      <wsdl:input message="tns:SendEmail_SCCOSoapIn" />
+      <wsdl:output message="tns:SendEmail_SCCOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnableService_Error">
+      <wsdl:input message="tns:EnableService_ErrorSoapIn" />
+      <wsdl:output message="tns:EnableService_ErrorSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SendEmailSoap" type="tns:SendEmailSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendEmail">
+      <soap:operation soapAction="http://tempuri.org/SendEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_ICRG">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_ICRG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_ISOD">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_ISOD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_MPBW">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_MPBW" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RCBP">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_RCBP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_MPDA">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_MPDA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_ICCD">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_ICCD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RCCP">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_RCCP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_EQTE">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_EQTE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_AEMP">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_AEMP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RATH">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_RATH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RAPV">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_RAPV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_APVD">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_APVD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_UPFL">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_UPFL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_SURL">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_SURL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RREG">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_RREG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RDLA">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_RDLA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RDNL">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_RDNL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RLEX">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_RLEX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RCLP">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_RCLP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RCRG">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_RCRG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RCRR">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_RCRR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RACT">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_RACT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_ROAC">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_ROAC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RPAR">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_RPAR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RPAC">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_RPAC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RPAN">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_RPAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RAPI">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_RAPI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RDRC">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_RDRC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_COAE">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_COAE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_COAP">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_COAP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_IOPA">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_IOPA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_BSPC">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_BSPC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RAUC">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_RAUC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_SCCO">
+      <soap:operation soapAction="http://tempuri.org/SendEmail_SCCO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnableService_Error">
+      <soap:operation soapAction="http://tempuri.org/EnableService_Error" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SendEmailSoap12" type="tns:SendEmailSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendEmail">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_ICRG">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_ICRG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_ISOD">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_ISOD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_MPBW">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_MPBW" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RCBP">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_RCBP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_MPDA">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_MPDA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_ICCD">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_ICCD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RCCP">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_RCCP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_EQTE">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_EQTE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_AEMP">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_AEMP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RATH">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_RATH" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RAPV">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_RAPV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_APVD">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_APVD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_UPFL">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_UPFL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_SURL">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_SURL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RREG">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_RREG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RDLA">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_RDLA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RDNL">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_RDNL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RLEX">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_RLEX" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RCLP">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_RCLP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RCRG">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_RCRG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RCRR">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_RCRR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RACT">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_RACT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_ROAC">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_ROAC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RPAR">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_RPAR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RPAC">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_RPAC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RPAN">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_RPAN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RAPI">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_RAPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RDRC">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_RDRC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_COAE">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_COAE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_COAP">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_COAP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_IOPA">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_IOPA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_BSPC">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_BSPC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_RAUC">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_RAUC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail_SCCO">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail_SCCO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnableService_Error">
+      <soap12:operation soapAction="http://tempuri.org/EnableService_Error" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SendEmail">
+    <wsdl:port name="SendEmailSoap" binding="tns:SendEmailSoap">
+      <soap:address location="http://webservices.reseller.com/emailservice/SendEmail.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SendEmailSoap12" binding="tns:SendEmailSoap12">
+      <soap12:address location="http://webservices.reseller.com/emailservice/SendEmail.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

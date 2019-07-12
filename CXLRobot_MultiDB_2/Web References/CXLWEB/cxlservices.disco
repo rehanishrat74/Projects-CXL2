@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://gateway.infinilogic.com/cxlservices.asmx?wsdl" docRef="https://gateway.infinilogic.com/cxlservices.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://gateway.infinilogic.com/cxlservices.asmx" xmlns:q1="http://tempuri.org/CXL/Service1" binding="q1:CXLServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:s0="http://tempuri.org/CXL/Service1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/CXL/Service1" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/CXL/Service1">
+      <s:element name="CXLProcessingRefundUpgrade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreditCardNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IssueNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StartDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardExpiry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLResponseCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLMessage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agentAcquirer" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="rid" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="merchantloginid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerloginid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sender" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zp" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ridAgainstInvoice" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="empCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CXLProcessingRefundUpgradeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CXLProcessingRefundUpgradeResult" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLResponseCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CXLProcessingRefundWithCcvUpgrade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreditCardNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IssueNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StartDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardExpiry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLResponseCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLMessage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agentAcquirer" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="rid" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="merchantloginid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerloginid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sender" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ccv" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zp" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ridAgainstInvoice" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="empcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CXLProcessingRefundWithCcvUpgradeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CXLProcessingRefundWithCcvUpgradeResult" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLResponseCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CXLMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CxlLiveTest">
+        <s:complexType />
+      </s:element>
+      <s:element name="CxlLiveTestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CxlLiveTestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="CXLProcessingRefundUpgradeSoapIn">
+    <part name="parameters" element="s0:CXLProcessingRefundUpgrade" />
+  </message>
+  <message name="CXLProcessingRefundUpgradeSoapOut">
+    <part name="parameters" element="s0:CXLProcessingRefundUpgradeResponse" />
+  </message>
+  <message name="CXLProcessingRefundWithCcvUpgradeSoapIn">
+    <part name="parameters" element="s0:CXLProcessingRefundWithCcvUpgrade" />
+  </message>
+  <message name="CXLProcessingRefundWithCcvUpgradeSoapOut">
+    <part name="parameters" element="s0:CXLProcessingRefundWithCcvUpgradeResponse" />
+  </message>
+  <message name="CxlLiveTestSoapIn">
+    <part name="parameters" element="s0:CxlLiveTest" />
+  </message>
+  <message name="CxlLiveTestSoapOut">
+    <part name="parameters" element="s0:CxlLiveTestResponse" />
+  </message>
+  <portType name="CXLRefundServiceSoap">
+    <operation name="CXLProcessingRefund">
+      <input name="CXLProcessingRefundUpgrade" message="s0:CXLProcessingRefundUpgradeSoapIn" />
+      <output name="CXLProcessingRefundUpgrade" message="s0:CXLProcessingRefundUpgradeSoapOut" />
+    </operation>
+    <operation name="CXLProcessingRefund">
+      <input name="CXLProcessingRefundWithCcvUpgrade" message="s0:CXLProcessingRefundWithCcvUpgradeSoapIn" />
+      <output name="CXLProcessingRefundWithCcvUpgrade" message="s0:CXLProcessingRefundWithCcvUpgradeSoapOut" />
+    </operation>
+    <operation name="IfCXLLive">
+      <input name="CxlLiveTest" message="s0:CxlLiveTestSoapIn" />
+      <output name="CxlLiveTest" message="s0:CxlLiveTestSoapOut" />
+    </operation>
+  </portType>
+  <binding name="CXLRefundServiceSoap" type="s0:CXLRefundServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="CXLProcessingRefund">
+      <soap:operation soapAction="http://tempuri.org/CXL/Service1/CXLProcessingRefundUpgrade" style="document" />
+      <input name="CXLProcessingRefundUpgrade">
+        <soap:body use="literal" />
+      </input>
+      <output name="CXLProcessingRefundUpgrade">
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CXLProcessingRefund">
+      <soap:operation soapAction="http://tempuri.org/CXL/Service1/CXLProcessingRefundWithCcvUpgrade" style="document" />
+      <input name="CXLProcessingRefundWithCcvUpgrade">
+        <soap:body use="literal" />
+      </input>
+      <output name="CXLProcessingRefundWithCcvUpgrade">
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="IfCXLLive">
+      <soap:operation soapAction="http://tempuri.org/CXL/Service1/CxlLiveTest" style="document" />
+      <input name="CxlLiveTest">
+        <soap:body use="literal" />
+      </input>
+      <output name="CxlLiveTest">
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="CXLRefundService">
+    <port name="CXLRefundServiceSoap" binding="s0:CXLRefundServiceSoap">
+      <soap:address location="http://gatewayrefund.infinilogic.com/cxlRefundService.asmx" />
+    </port>
+  </service>
+</definitions>

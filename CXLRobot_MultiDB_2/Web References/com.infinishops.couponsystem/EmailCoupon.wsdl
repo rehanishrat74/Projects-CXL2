@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://tempuri.org/couponsystem.infinishops.com/EmailCoupon" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/couponsystem.infinishops.com/EmailCoupon" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/couponsystem.infinishops.com/EmailCoupon">
+      <s:element name="EmailToCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MerchantID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CustomerID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="OrderId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailToCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EmailToCustomerResult" type="s0:ErrorCodesInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ErrorCodesInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </types>
+  <message name="EmailToCustomerSoapIn">
+    <part name="parameters" element="s0:EmailToCustomer" />
+  </message>
+  <message name="EmailToCustomerSoapOut">
+    <part name="parameters" element="s0:EmailToCustomerResponse" />
+  </message>
+  <portType name="EmailCouponSoap">
+    <operation name="EmailToCustomer">
+      <input message="s0:EmailToCustomerSoapIn" />
+      <output message="s0:EmailToCustomerSoapOut" />
+    </operation>
+  </portType>
+  <binding name="EmailCouponSoap" type="s0:EmailCouponSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="EmailToCustomer">
+      <soap:operation soapAction="http://tempuri.org/couponsystem.infinishops.com/EmailCoupon/EmailToCustomer" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="EmailCouponSoap12" type="s0:EmailCouponSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <operation name="EmailToCustomer">
+      <soap12:operation soapAction="http://tempuri.org/couponsystem.infinishops.com/EmailCoupon/EmailToCustomer" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="EmailCoupon">
+    <port name="EmailCouponSoap" binding="s0:EmailCouponSoap">
+      <soap:address location="http://couponsystem.infinishops.com/EmailCoupon.asmx" />
+    </port>
+    <port name="EmailCouponSoap12" binding="s0:EmailCouponSoap12">
+      <soap12:address location="http://couponsystem.infinishops.com/EmailCoupon.asmx" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </port>
+  </service>
+</definitions>

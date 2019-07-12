@@ -1,0 +1,571 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{903185C4-B771-49B9-87CC-3CB5D71BC566}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>execute_sequence.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>WindowsGateWayCreditCard</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>WindowsGateWayCreditCard</RootNamespace>
+    <StartupObject>WindowsGateWayCreditCard.CXL.CXLROBOT</StartupObject>
+    <WebReference_EnableProperties>true</WebReference_EnableProperties>
+    <WebReference_EnableSQLTypes>false</WebReference_EnableSQLTypes>
+    <WebReference_EnableLegacyEventingModel>true</WebReference_EnableLegacyEventingModel>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WindowsGateWayCreditCard.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WindowsGateWayCreditCard.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BPtsPayment">
+      <Name>BPtsPayment</Name>
+      <HintPath>bin\BPtsPayment.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="InfiniLogic.AccountsCentre.Common">
+      <Name>InfiniLogic.AccountsCentre.Common</Name>
+      <HintPath>bin\InfiniLogic.AccountsCentre.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="InvoicePost">
+      <Name>InvoicePost</Name>
+      <HintPath>\\netserver\Projects\accounts.infinibiz.com\Development\Version 1.1\UI Project\Library\components\InvoicePost.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <Name>MySql.Data</Name>
+      <HintPath>bin\MySql.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="pwdsqlsrvdotnet">
+      <Name>pwdsqlsrvdotnet</Name>
+      <HintPath>bin\pwdsqlsrvdotnet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="rsaLibrary1">
+      <Name>rsaLibrary1</Name>
+      <HintPath>bin\rsaLibrary1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <COMReference Include="COMSVCSLib">
+      <Guid>{2A005C00-A5DE-11CF-9E66-00AA00A3F464}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Data\Web.config" />
+    <None Include="Data\XML\Payroll\Web.config" />
+    <None Include="Data\XML\Web.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Settings.settings">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\com.accountscentre.callback\CallBackService.disco" />
+    <None Include="Web References\com.accountscentre.callback\CallBackService.wsdl" />
+    <None Include="Web References\com.accountscentre.callback\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\com.accountscentre.callback\ServiceResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.infini.cxl\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\com.infini.cxl\Service.disco" />
+    <None Include="Web References\com.infini.cxl\Service.wsdl" />
+    <None Include="Web References\com.infinibiz.accountsws\AccountsProService.disco" />
+    <None Include="Web References\com.infinibiz.accountsws\AccountsProService.wsdl" />
+    <None Include="Web References\com.infinibiz.accountsws\ClassUser.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.infinibiz.accountsws\PackagesListResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.infinibiz.accountsws\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\com.infinibiz.webservices\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\com.infinibiz.webservices\reseller.wsdl" />
+    <None Include="Web References\com.infinibiz.webservices\returnmsg.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.infinibiz.webservices\returnResellerInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.infinibiz.webservices\returnResellerProducts.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.infinishops.addsupplier\AddSupplier.disco" />
+    <None Include="Web References\com.infinishops.addsupplier\AddSupplier.wsdl" />
+    <None Include="Web References\com.infinishops.addsupplier\ErrorCodesInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.infinishops.addsupplier\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\com.infinishops.couponsystem\EmailCoupon.disco" />
+    <None Include="Web References\com.infinishops.couponsystem\EmailCoupon.wsdl" />
+    <None Include="Web References\com.infinishops.couponsystem\ErrorCodesInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.infinishops.couponsystem\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\com.infinishops.io\EnabledServicesResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.infinishops.io\IShopServiceActivation.disco" />
+    <None Include="Web References\com.infinishops.io\IShopServiceActivation.wsdl" />
+    <None Include="Web References\com.infinishops.io\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\com.infinishops.postservices\ErrorCodeInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.infinishops.postservices\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\com.infinishops.postservices\Service.wsdl" />
+    <None Include="Web References\com.reseller.webservices\AddMainDBOrderResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.reseller.webservices\GetBizInfoResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.reseller.webservices\ishoporderhander.disco" />
+    <None Include="Web References\com.reseller.webservices\ishoporderhander.wsdl" />
+    <None Include="Web References\com.reseller.webservices\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\com.reseller.webservices\RegisterCustomerOnM2Result.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.webservices.ishops\orderprocessing.disco" />
+    <None Include="Web References\com.webservices.ishops\orderprocessing.wsdl" />
+    <None Include="Web References\com.webservices.ishops\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\CXLWEB\cxlservices.disco" />
+    <None Include="Web References\CXLWEB\cxlservices.wsdl" />
+    <None Include="Web References\CXLWEB\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\InfiniMarket\Default.disco" />
+    <None Include="Web References\InfiniMarket\Default.wsdl" />
+    <None Include="Web References\InfiniMarket\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\InfiniPayPal\InfiniPayPalWebService.disco" />
+    <None Include="Web References\InfiniPayPal\InfiniPayPalWebService.wsdl" />
+    <None Include="Web References\InfiniPayPal\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\InvoicePostWS\AccountsProService.disco" />
+    <None Include="Web References\InvoicePostWS\AccountsProService.wsdl" />
+    <None Include="Web References\InvoicePostWS\EmployeeTransactionReport.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\InvoicePostWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\InvoicePostWS\SubscriptionResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\InvoicePostWS\SupplierFromCustomerResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\InvoicePostWS\TransactionReport.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Io.InfiniShops\EnabledServicesResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Io.InfiniShops\GetTicketTextResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Io.InfiniShops\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\Io.InfiniShops\ServiceActivation.disco" />
+    <None Include="Web References\Io.InfiniShops\ServiceActivation.wsdl" />
+    <None Include="Web References\Io.InfiniShops\TicketHandlerResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommandData.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Connection.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CXLROBOT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CXLTRANSACTION.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.accountscentre.callback\Reference.vb">
+      <DependentUpon>Reference.map</DependentUpon>
+      <SubType>code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Web References\com.infini.cxl\Reference.vb">
+      <DependentUpon>Reference.map</DependentUpon>
+      <SubType>code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Web References\com.infinibiz.accountsws\Reference.vb">
+      <DependentUpon>Reference.map</DependentUpon>
+      <SubType>code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Web References\com.infinibiz.webservices\Reference.vb">
+      <DependentUpon>Reference.map</DependentUpon>
+      <SubType>code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Web References\com.infinishops.addsupplier\Reference.vb">
+      <DependentUpon>Reference.map</DependentUpon>
+      <SubType>code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Web References\com.infinishops.couponsystem\Reference.vb">
+      <DependentUpon>Reference.map</DependentUpon>
+      <SubType>code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Web References\com.infinishops.io\Reference.vb">
+      <DependentUpon>Reference.map</DependentUpon>
+      <SubType>code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Web References\com.infinishops.postservices\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.reseller.webservices\Reference.vb">
+      <DependentUpon>Reference.map</DependentUpon>
+      <SubType>code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Web References\com.webservices.ishops\Reference.vb">
+      <DependentUpon>Reference.map</DependentUpon>
+      <SubType>code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Web References\CXLWEB\Reference.vb">
+      <DependentUpon>Reference.map</DependentUpon>
+      <SubType>code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Web References\InfiniMarket\Reference.vb">
+      <DependentUpon>Reference.map</DependentUpon>
+      <SubType>code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Web References\InfiniPayPal\Reference.vb">
+      <DependentUpon>Reference.map</DependentUpon>
+      <SubType>code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Web References\InvoicePostWS\Reference.vb">
+      <DependentUpon>Reference.map</DependentUpon>
+      <SubType>code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Web References\Io.InfiniShops\Reference.vb">
+      <DependentUpon>Reference.map</DependentUpon>
+      <SubType>code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Web References\ServiceActivation\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="XCreditCardInformation.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMySqlCommand.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="CXLROBOT.resx">
+      <DependentUpon>CXLROBOT.vb</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="bin\Administration.BLL.dll" />
+    <Content Include="bin\BPtsPayment.dll" />
+    <Content Include="bin\Data\Catalog.xml" />
+    <Content Include="bin\Data\initLoc.xml" />
+    <Content Include="bin\Data\XML\Catalog.xml" />
+    <Content Include="bin\Data\XML\initLoc.xml" />
+    <Content Include="bin\ExceptionFormatter.dll" />
+    <Content Include="bin\HTTPCompressingModule.dll" />
+    <Content Include="bin\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="bin\InfiniLogic.AccountsCentre.AccountsPro.ProductComponent.dll" />
+    <Content Include="bin\InfiniLogic.AccountsCentre.BLL.dll" />
+    <Content Include="bin\InfiniLogic.AccountsCentre.Common.dll" />
+    <Content Include="bin\InfiniLogic.AccountsCentre.DAL.dll" />
+    <Content Include="bin\InfiniLogic.AccountsCentre.InvoiceProcess.dll" />
+    <Content Include="bin\InfiniLogic.DAL.dll" />
+    <Content Include="bin\Infinilogic.MYSql.DAL.dll" />
+    <Content Include="bin\Interop.COMSVCSLib.dll" />
+    <Content Include="bin\Interop.DTS.dll" />
+    <Content Include="bin\Interop.pwdSqlSrv.dll" />
+    <Content Include="bin\InvoicePost.dll" />
+    <Content Include="bin\LocalizationToolkit.dll" />
+    <Content Include="bin\Microsoft.Web.UI.WebControls.dll" />
+    <Content Include="bin\MySql.Data.dll" />
+    <Content Include="bin\pwdsqlsrvdotnet.dll" />
+    <Content Include="bin\Robot.xml" />
+    <Content Include="bin\rsaLibrary1.dll" />
+    <Content Include="Data\Catalog.xml" />
+    <Content Include="Data\initLoc.xml" />
+    <Content Include="Data\XML\Catalog.xml" />
+    <Content Include="Data\XML\initLoc.xml" />
+    <Content Include="execute_sequence.ico" />
+    <Content Include="Robot.xml" />
+    <None Include="Web References\ServiceActivation\GetBizInfoResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServiceActivation\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiceActivation\ServiceActivation.disco" />
+    <None Include="Web References\com.infinishops.postservices\Service.disco" />
+    <None Include="Web References\ServiceActivation\ServiceActivation.wsdl" />
+    <WebReferenceUrl Include="http://accountsws.accountscentre.com/AccountsProService.asmx">
+      <RelPath>Web References\InvoicePostWS\</RelPath>
+      <UrlBehavior>Static</UrlBehavior>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://accountsws.infinibiz.com/AccountsProService.asmx">
+      <RelPath>Web References\com.infinibiz.accountsws\</RelPath>
+      <UrlBehavior>Static</UrlBehavior>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://callback.accountscentre.com/services/CallBackService.asmx">
+      <RelPath>Web References\com.accountscentre.callback\</RelPath>
+      <UrlBehavior>Static</UrlBehavior>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://couponsystem.infinishops.com/AddSupplier.asmx">
+      <RelPath>Web References\com.infinishops.addsupplier\</RelPath>
+      <UrlBehavior>Static</UrlBehavior>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://couponsystem.infinishops.com/EmailCoupon.asmx">
+      <RelPath>Web References\com.infinishops.couponsystem\</RelPath>
+      <UrlBehavior>Static</UrlBehavior>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://cxl.infini.com/Service.asmx">
+      <RelPath>Web References\com.infini.cxl\</RelPath>
+      <UrlBehavior>Static</UrlBehavior>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://cxlrobot.accountscentre.com/CXLRobot_ServiceActivation/ServiceActivation.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServiceActivation\</RelPath>
+      <UpdateFromURL>http://cxlrobot.accountscentre.com/CXLRobot_ServiceActivation/ServiceActivation.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WindowsGateWayCreditCard_ServiceActivation_ServiceActivation</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://io.infinishops.com/services/IShopServiceActivation.asmx">
+      <RelPath>Web References\com.infinishops.io\</RelPath>
+      <UrlBehavior>Static</UrlBehavior>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://io.infinishops.com/services/ServiceActivation.asmx">
+      <RelPath>Web References\Io.InfiniShops\</RelPath>
+      <UrlBehavior>Static</UrlBehavior>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://ishops.webservices.com/order/orderprocessing.asmx">
+      <RelPath>Web References\com.webservices.ishops\</RelPath>
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <UpdateFromURL>http://ishops.webservices.com/order/orderprocessing.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WindowsGateWayCreditCard_com_webservices_ishops_OrderProcessing</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://postservices.infinishops.com/Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.infinishops.postservices\</RelPath>
+      <UpdateFromURL>http://postservices.infinishops.com/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WindowsGateWayCreditCard_com_infinishops_postservices_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://service.infinimarket.com/Default.asmx">
+      <RelPath>Web References\InfiniMarket\</RelPath>
+      <UrlBehavior>Static</UrlBehavior>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://webservices.infinibiz.com/reseller.php%3fwsdl">
+      <RelPath>Web References\com.infinibiz.webservices\</RelPath>
+      <UrlBehavior>Static</UrlBehavior>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://webservices.reseller.com/common/ishoporderhander.asmx%3fop=GetBizInfo">
+      <RelPath>Web References\com.reseller.webservices\</RelPath>
+      <UrlBehavior>Static</UrlBehavior>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://gateway.infinilogic.com/cxlservices.asmx">
+      <RelPath>Web References\CXLWEB\</RelPath>
+      <UrlBehavior>Static</UrlBehavior>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://paypalgate.infinishops.com/InfiniPayPalWebService.asmx">
+      <RelPath>Web References\InfiniPayPal\</RelPath>
+      <UrlBehavior>Static</UrlBehavior>
+    </WebReferenceUrl>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

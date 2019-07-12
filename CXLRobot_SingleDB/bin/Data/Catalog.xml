@@ -1,0 +1,544 @@
+<?xml version="1.0"?>
+<!-- edited with XML Spy v4.0.1 U (http://www.xmlspy.com) by LEGO (LEGO) -->
+<!-- <RegularExpressionsCatalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.infinilogic.com CatalogTest.xsd"> -->
+<!-- <?xml-stylesheet type="text/xsl" href="abc.xsl"?> -->
+<RegularExpressionsCatalog>
+	<Categories>
+		<Category id="1">
+			<Expression id="1">
+				<Pattern>^([1-9]\d*)$</Pattern>
+			</Expression>
+			<Expression id="2">
+				<Pattern>^([1-9]\d*|0)$</Pattern>
+			</Expression>
+			<Expression id="3">
+				<Pattern>^([1-9]{1}\d*(\.\d{1,2})?|0(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="4">
+				<Pattern>^([1-9]{1}\d*(\.\d{1,})?|0(\.\d{1,})?)$</Pattern>
+			</Expression>
+			<Expression id="5">
+				<Pattern>^([1-9]{1}\d*(\.\d{2})?|0(\.\d{2})?)$</Pattern>
+			</Expression>
+			<Expression id="6">
+				<Pattern>^([1-9]{1}\d*(\.)?|0(\.)?)$</Pattern>
+			</Expression>
+			<Expression id="7">
+				<Pattern>^([1-9]{1}\d*(\.\d{0,2})?|0(\.\d{0,2})?|\.\d{1,2})$</Pattern>
+			</Expression>
+			<Expression id="8">
+				<Pattern>^([1-9]{1}\d*(\.\d*)?|0(\.\d*)?|\.\d{1,})$</Pattern>
+			</Expression>
+			<Expression id="9">
+				<Pattern>^([1-9]{1}\d*(\.)?(\d{2})?|0(\.)?(\d{2})?|\.\d{2})$</Pattern>
+			</Expression>
+			<Expression id="10">
+				<Pattern>^(0(\.\d{1,})?)$</Pattern>
+			</Expression>
+			<Expression id="11">
+				<Pattern>^(0(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="12">
+				<Pattern>^(0(\.\d{2})?)$</Pattern>
+			</Expression>
+			<Expression id="13">
+				<Pattern>^(0(\.\d*)?|\.\d{1,})$</Pattern>
+			</Expression>
+			<Expression id="14">
+				<Pattern>^(0(\.\d{0,2})?|\.\d{1,2})$</Pattern>
+			</Expression>
+			<Expression id="15">
+				<Pattern>^(0(\.)?(\d{2})?|\.\d{2})$</Pattern>
+			</Expression>
+			<Expression id="16">
+				<Pattern>^(0(\.\d{1,}))$</Pattern>
+			</Expression>
+			<Expression id="17">
+				<Pattern>^(0(\.\d{1,2}))$</Pattern>
+			</Expression>
+			<Expression id="18">
+				<Pattern>^(0(\.\d{2}))$</Pattern>
+			</Expression>
+			<Expression id="19">
+				<Pattern>^(0(\.\d{1,})|\.\d{1,})$</Pattern>
+			</Expression>
+			<Expression id="20">
+				<Pattern>^(0(\.\d{1,2})|\.\d{1,2})$</Pattern>
+			</Expression>
+			<Expression id="21">
+				<Pattern>^(0(\.\d{2})|\.\d{2})$</Pattern>
+			</Expression>
+			<Expression id="22">
+				<Pattern>^([-][1-9]\d*)$</Pattern>
+			</Expression>
+			<Expression id="23">
+				<Pattern>^([-][1-9]\d*|0)$</Pattern>
+			</Expression>
+			<Expression id="24">
+				<Pattern>^[-]([1-9]{1}\d*(\.\d{1,2})?|0(\.\d{1,2})?)$|0</Pattern>
+			</Expression>
+			<Expression id="25">
+				<Pattern>^[-]([1-9]{1}\d*(\.\d{1,})?|0(\.\d{1,})?)$|0</Pattern>
+			</Expression>
+			<Expression id="26">
+				<Pattern>^[-]([1-9]{1}\d*(\.\d{2})?|0(\.\d{2})?)$|0</Pattern>
+			</Expression>
+			<Expression id="27">
+				<Pattern>^[-]([1-9]{1}\d*(\.)?|0(\.)?)$|0</Pattern>
+			</Expression>
+			<Expression id="28">
+				<Pattern>^[-]([1-9]{1}\d*(\.\d{0,2})?|0(\.\d{0,2})?|\.\d{1,2})$|0</Pattern>
+			</Expression>
+			<Expression id="29">
+				<Pattern>^[-]([1-9]{1}\d*(\.\d*)?|0(\.\d*)?|\.\d{1,})$|0</Pattern>
+			</Expression>
+			<Expression id="30">
+				<Pattern>^[-]([1-9]{1}\d*(\.)?(\d{2})?|0(\.)?(\d{2})?|\.\d{2})$|0</Pattern>
+			</Expression>
+			<Expression id="31">
+				<Pattern>^[-](0(\.\d{1,})?)$|0</Pattern>
+			</Expression>
+			<Expression id="32">
+				<Pattern>^[-](0(\.\d{1,2})?)$|0</Pattern>
+			</Expression>
+			<Expression id="33">
+				<Pattern>^[-](0(\.\d{2})?)$|0</Pattern>
+			</Expression>
+			<Expression id="34">
+				<Pattern>^[-](0(\.\d*)?|\.\d{1,})$|0</Pattern>
+			</Expression>
+			<Expression id="35">
+				<Pattern>^[-](0(\.\d{0,2})?|\.\d{1,2})$|0</Pattern>
+			</Expression>
+			<Expression id="36">
+				<Pattern>^[-](0(\.)?(\d{2})?|\.\d{2})$|0</Pattern>
+			</Expression>
+			<Expression id="37">
+				<Pattern>^[-](0(\.\d{1,}))$</Pattern>
+			</Expression>
+			<Expression id="38">
+				<Pattern>^[-](0(\.\d{1,2}))$</Pattern>
+			</Expression>
+			<Expression id="39">
+				<Pattern>^[-](0(\.\d{2}))$</Pattern>
+			</Expression>
+			<Expression id="40">
+				<Pattern>^[-](0(\.\d{1,})|\.\d{1,})$</Pattern>
+			</Expression>
+			<Expression id="41">
+				<Pattern>^[-](0(\.\d{1,2})|\.\d{1,2})$</Pattern>
+			</Expression>
+			<Expression id="42">
+				<Pattern>^[-](0(\.\d{2})|\.\d{2})$</Pattern>
+			</Expression>
+			<Expression id="43">
+				<Pattern>^[-]?([1-9]\d*)$</Pattern>
+			</Expression>
+			<Expression id="44">
+				<Pattern>^[-]?([1-9]\d*|0)$</Pattern>
+			</Expression>
+			<Expression id="45">
+				<Pattern>^[-]?([1-9]{1}\d*(\.\d{1,2})?|0(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="46">
+				<Pattern>^[-]?([1-9]{1}\d*(\.\d{1,})?|0(\.\d{1,})?)$</Pattern>
+			</Expression>
+			<Expression id="47">
+				<Pattern>^[-]?([1-9]{1}\d*(\.\d{2})?|0(\.\d{2})?)$</Pattern>
+			</Expression>
+			<Expression id="48">
+				<Pattern>^[-]?([1-9]{1}\d*(\.)?|0(\.)?)$</Pattern>
+			</Expression>
+			<Expression id="49">
+				<Pattern>^[-]?([1-9]{1}\d*(\.\d{0,2})?|0(\.\d{0,2})?|\.\d{1,2})$</Pattern>
+			</Expression>
+			<Expression id="50">
+				<Pattern>^[-]?([1-9]{1}\d*(\.\d*)?|0(\.\d*)?|\.\d{1,})$</Pattern>
+			</Expression>
+			<Expression id="51">
+				<Pattern>^[-]?([1-9]{1}\d*(\.)?(\d{2})?|0(\.(\d{2})?)?|\.\d{2})$</Pattern>
+			</Expression>
+			<Expression id="52">
+				<Pattern>^[-]?(0(\.\d{1,})?)$</Pattern>
+			</Expression>
+			<Expression id="53">
+				<Pattern>^[-]?(0(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="54">
+				<Pattern>^[-]?(0(\.\d{2})?)$</Pattern>
+			</Expression>
+			<Expression id="55">
+				<Pattern>^[-]?(0(\.\d*)?|\.\d{1,})$</Pattern>
+			</Expression>
+			<Expression id="56">
+				<Pattern>^[-]?(0(\.\d{0,2})?|\.\d{1,2})$</Pattern>
+			</Expression>
+			<Expression id="57">
+				<Pattern>^[-]?(0(\.(\d{2})?)?|\.\d{2})$</Pattern>
+			</Expression>
+			<Expression id="58">
+				<Pattern>^[-]?(0(\.\d{1,}))$</Pattern>
+			</Expression>
+			<Expression id="59">
+				<Pattern>^[-]?(0(\.\d{1,2}))$</Pattern>
+			</Expression>
+			<Expression id="60">
+				<Pattern>^[-]?(0(\.\d{2}))$</Pattern>
+			</Expression>
+			<Expression id="61">
+				<Pattern>^[-]?(0?\.\d{1,})$</Pattern>
+			</Expression>
+			<Expression id="62">
+				<Pattern>^[-]?(0?\.\d{1,2})$</Pattern>
+			</Expression>
+			<Expression id="63">
+				<Pattern>^[-]?(0?\.\d{2})$</Pattern>
+			</Expression>
+			<Expression id="64">
+				<Pattern>^(1(\d)?|2([0-8])?|[3-9])$</Pattern>
+			</Expression>
+			<Expression id="65">
+				<Pattern>^([1-2](\d)?|[3-9])$</Pattern>
+			</Expression>
+			<Expression id="66">
+				<Pattern>^([1-2](\d)?|3(0)?|[4-9])$</Pattern>
+			</Expression>
+			<Expression id="67">
+				<Pattern>^([1-2](\d)?|3(0|1)?|[4-9])$</Pattern>
+			</Expression>
+			<Expression id="68">
+				<Pattern>^(1([0-2])?|[2-9])$</Pattern>
+			</Expression>
+			<Expression id="69">
+				<Pattern>^(19\d{2}|20\d{2})$</Pattern>
+			</Expression>
+			<Expression id="70">
+				<Pattern>^(\d{1,2}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="71">
+				<Pattern>^(\d{1,3}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="72">
+				<Pattern>^(\d{1,4}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="73">
+				<Pattern>^(\d{1,5}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="74">
+				<Pattern>^(\d{1,6}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="75">
+				<Pattern>^(\d{1,7}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="76">
+				<Pattern>^(\d{1,8}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="77">
+				<Pattern>^(\d{1,9}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="78">
+				<Pattern>^[-](\d{1,2}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="79">
+				<Pattern>^[-](\d{1,3}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="80">
+				<Pattern>^[-](\d{1,4}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="81">
+				<Pattern>^[-](\d{1,5}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="82">
+				<Pattern>^[-](\d{1,6}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="83">
+				<Pattern>^[-](\d{1,7}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="84">
+				<Pattern>^[-](\d{1,8}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="85">
+				<Pattern>^[-](\d{1,9}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="86">
+				<Pattern>^[-]?(\d{1,2}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="87">
+				<Pattern>^[-]?(\d{1,3}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="88">
+				<Pattern>^[-]?(\d{1,4}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="89">
+				<Pattern>^[-]?(\d{1,5}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="90">
+				<Pattern>^[-]?(\d{1,6}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="91">
+				<Pattern>^[-]?(\d{1,7}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="92">
+				<Pattern>^[-]?(\d{1,8}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="93">
+				<Pattern>^[-]?(\d{1,9}(\.\d{1,2})?)$</Pattern>
+			</Expression>
+			<Expression id="94">
+				<Pattern>^(0?[1-9]|1[0-9]|2[0-8])$</Pattern>
+			</Expression>
+			<Expression id="95">
+				<Pattern>^(0?[1-9]|[1-2][0-9])$</Pattern>
+			</Expression>
+			<Expression id="96">
+				<Pattern>^(0?[1-9]|[1-2][0-9]|30)$</Pattern>
+			</Expression>
+			<Expression id="97">
+				<Pattern>^(0?[1-9]|[1-2][0-9]|3(0|1))$</Pattern>
+			</Expression>
+			<Expression id="98">
+				<Pattern>^(0?[1-9]|1[0-2])$</Pattern>
+			</Expression>
+			<Expression id="99">
+				<Pattern>^([1-7])$</Pattern>
+			</Expression>
+			<Expression id="100">
+				<Pattern>^(0?[1-7])$</Pattern>
+			</Expression>
+		</Category>
+		<Category id="2">
+			<Expression id="1">
+				<Pattern>^([a-z]+)$</Pattern>
+			</Expression>
+			<Expression id="2">
+				<Pattern>^([A-Z]+)$</Pattern>
+			</Expression>
+			<Expression id="3">
+				<Pattern>^([A-Za-z]+)$</Pattern>
+			</Expression>
+			<Expression id="4">
+				<Pattern>^([A-Z][a-z]*\.)$</Pattern>
+			</Expression>
+			<Expression id="5">
+				<Pattern>^([A-Z][a-z]*(\.)?)$</Pattern>
+			</Expression>
+			<Expression id="6">
+				<Pattern>^([A-Z][a-z]*(( )[A-Z][a-z]*)*(\.))$</Pattern>
+			</Expression>
+			<Expression id="7">
+				<Pattern>y</Pattern>
+			</Expression>
+			<Expression id="8">
+				<Pattern>n</Pattern>
+			</Expression>
+			<Expression id="9">
+				<Pattern>Y</Pattern>
+			</Expression>
+			<Expression id="10">
+				<Pattern>N</Pattern>
+			</Expression>
+			<Expression id="11">
+				<Pattern>y|n|Y|N</Pattern>
+			</Expression>
+			<Expression id="12">
+				<Pattern>y|n</Pattern>
+			</Expression>
+			<Expression id="13">
+				<Pattern>Y|N</Pattern>
+			</Expression>
+			<Expression id="14">
+				<Pattern>y|Y</Pattern>
+			</Expression>
+			<Expression id="15">
+				<Pattern>n|N</Pattern>
+			</Expression>
+			<Expression id="16">
+				<Pattern>yes</Pattern>
+			</Expression>
+			<Expression id="17">
+				<Pattern>no</Pattern>
+			</Expression>
+			<Expression id="18">
+				<Pattern>YES</Pattern>
+			</Expression>
+			<Expression id="19">
+				<Pattern>NO</Pattern>
+			</Expression>
+			<Expression id="20">
+				<Pattern>Yes</Pattern>
+			</Expression>
+			<Expression id="21">
+				<Pattern>No</Pattern>
+			</Expression>
+			<Expression id="22">
+				<Pattern>(y|Y)es|(n|N)o|YES|NO</Pattern>
+			</Expression>
+			<Expression id="23">
+				<Pattern>yes|no</Pattern>
+			</Expression>
+			<Expression id="24">
+				<Pattern>YES|NO</Pattern>
+			</Expression>
+			<Expression id="25">
+				<Pattern>Yes|No</Pattern>
+			</Expression>
+			<Expression id="26">
+				<Pattern>(y|Y)es</Pattern>
+			</Expression>
+			<Expression id="27">
+				<Pattern>Y(ES|es)</Pattern>
+			</Expression>
+			<Expression id="28">
+				<Pattern>(n|N)o</Pattern>
+			</Expression>
+			<Expression id="29">
+				<Pattern>N(O|o)</Pattern>
+			</Expression>
+			<Expression id="30">
+				<Pattern>(fe)?(male)</Pattern>
+			</Expression>
+			<Expression id="31">
+				<Pattern>f</Pattern>
+			</Expression>
+			<Expression id="32">
+				<Pattern>m</Pattern>
+			</Expression>
+			<Expression id="33">
+				<Pattern>f|m</Pattern>
+			</Expression>
+			<Expression id="34">
+				<Pattern>^(\w+)$</Pattern>
+			</Expression>
+			<Expression id="35">
+				<Pattern><![CDATA[^([A-Za-z0-9 ~!"@#$%&'\(\)\s\*\+,\-\./:;<=>\?\[\\\]^_\{\}£€]*)$]]></Pattern>
+			</Expression>
+			<Expression id="36">
+				<Pattern>^(\w+(( )\w+)*)$</Pattern>
+			</Expression>
+			<Expression id="37">
+				<Pattern>^([A-Za-z0-9 ,._]*)$</Pattern>
+			</Expression>
+		</Category>
+		<Category id="3">
+			<Expression id="1">
+				<Pattern/>
+			</Expression>
+		</Category>
+		<Category id="4">
+			<Expression id="1">
+				<Pattern>^((((0?[1-9]|[12]\d|3[01])[\.\-\/](0?[13578]|1[02])[\.\-\/]((1[6-9]|[2-9]\d)?\d{2}))|((0?[1-9]|[12]\d|30)[\.\-\/](0?[13456789]|1[012])[\.\-\/]((1[6-9]|[2-9]\d)?\d{2}))|((0?[1-9]|1\d|2[0-8])[\.\-\/]0?2[\.\-\/]((1[6-9]|[2-9]\d)?\d{2}))|(29[\.\-\/]0?2[\.\-\/]((1[6-9]|[2-9]\d)?(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)|00))))$</Pattern>
+			</Expression>
+			<Expression id="2">
+				<Pattern>^([A-Z]{1,2}[1-9][0-9]?[A-Z]? [0-9][A-Z]{2,}|GIR 0AA)$</Pattern>
+			</Expression>
+			<Expression id="3">
+				<Pattern>^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$</Pattern>
+			</Expression>
+			<Expression id="4">
+				<Pattern><![CDATA[^((http|https|ftp)\://)?([a-zA-Z0-9\.\-]+(\:[a-zA-Z0-9\.&%\$\-]+)*@)*((25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9])\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[0-9])|([a-zA-Z0-9\-]+\.)*[a-zA-Z0-9\-]+\.[a-zA-Z]{2,4})(\:[0-9]+)*(/[^/][a-zA-Z0-9\.\,\?\'\\/\+&%\$#\=~_\-]*)*$]]></Pattern>
+			</Expression>
+			<Expression id="5">
+				<Pattern><![CDATA[^(http|https|ftp)\://([a-zA-Z0-9\.\-]+(\:[a-zA-Z0-9\.&%\$\-]+)*@)*((25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9])\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[0-9])|([a-zA-Z0-9\-]+\.)*[a-zA-Z0-9\-]+\.[a-zA-Z]{2,4})(\:[0-9]+)*(/[^/][a-zA-Z0-9\.\,\?\'\\/\+&%\$#\=~_\-]*)*$]]></Pattern>
+			</Expression>
+			<Expression id="6">
+				<Pattern>^((((0?[1-9]|[12]\d|3[01])[\.\-\/](0?[13578]|1[02])[\.\-\/]((1[6-9]|[2-9]\d)?\d{2}))|((0?[1-9]|[12]\d|30)[\.\-\/](0?[13456789]|1[012])[\.\-\/]((1[6-9]|[2-9]\d)?\d{2}))|((0?[1-9]|1\d|2[0-8])[\.\-\/]0?2[\.\-\/]((1[6-9]|[2-9]\d)?\d{2}))|(29[\.\-\/]0?2[\.\-\/]((1[6-9]|[2-9]\d)?(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)|00)))|(((0[1-9]|[12]\d|3[01])(0[13578]|1[02])((1[6-9]|[2-9]\d)?\d{2}))|((0[1-9]|[12]\d|30)(0[13456789]|1[012])((1[6-9]|[2-9]\d)?\d{2}))|((0[1-9]|1\d|2[0-8])02((1[6-9]|[2-9]\d)?\d{2}))|(2902((1[6-9]|[2-9]\d)?(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)|00))))$</Pattern>
+			</Expression>
+		</Category>
+		<Category id="5">
+			<Expression id="1">
+				<Pattern>^(\d{3} \d{5} \d{5})$</Pattern>
+			</Expression>
+			<Expression id="2">
+				<Pattern>^((((0?[1-9]|[12]\d|3[01])[\.\-\/](0?[13578]|1[02]))|((0?[1-9]|[12]\d|30)[\.\-\/](0?[13456789]|1[012]))|((0?[1-9]|[1-2]\d)[\.\-\/]0?2)|))$</Pattern>
+			</Expression>
+		</Category>
+		<Category id="6">
+			<Expression id="1">
+				<Pattern>[0-9]{9}</Pattern>
+			</Expression>
+			<Expression id="2">
+				<Pattern>[0-9]{6}</Pattern>
+			</Expression>
+		</Category>
+		<Category id="7">
+			<Expression id="1">
+				<Pattern><![CDATA[[^@'<>"]+@[^@'<>"]+]]></Pattern>
+			</Expression>
+			<Expression id="2">
+				<Pattern><![CDATA[^([A-Za-z0-9 ~!"@#$%&'\(\)\*\+,\-\./:;<=>\?\[\\\]^_\{\}£€]*)$]]></Pattern>
+			</Expression>
+			<Expression id="3">
+				<Pattern><![CDATA[^([A-Za-z0-9][A-Za-z0-9 ~!"@#$%&'\(\)\*\+,\-\./:;<=>\?\[\\\]^_\{\}£€]*)$]]></Pattern>
+			</Expression>
+			<Expression id="4">
+				<Pattern><![CDATA[^([A-Za-z][A-Za-z'\-]*)$]]></Pattern>
+			</Expression>
+			<Expression id="5">
+				<Pattern><![CDATA[^([A-Za-z0-9 ,\.\(\)/&\-']+)$]]></Pattern>
+			</Expression>
+			<Expression id="6">
+				<Pattern>^([0-9\(\)\-\s]{1,35})$</Pattern>
+			</Expression>
+			<Expression id="7">
+				<Pattern><![CDATA[^([A-Za-z0-9 ,\.\(\)/&'\-"!%\*_\+:@<>\?=;]*)$]]></Pattern>
+			</Expression>
+			<Expression id="8">
+				<Pattern><![CDATA[^([A-Za-z0-9 &'\(\)\*,\-\./]*)$]]></Pattern>
+			</Expression>
+			<Expression id="9">
+				<Pattern><![CDATA[^([A-Za-z0-9 &'\(\)\*,\-\./@£]*)$]]></Pattern>
+			</Expression>
+			<Expression id="10">
+				<Pattern>[0-9]{3}</Pattern>
+			</Expression>
+			<Expression id="11">
+				<Pattern>[0-9]{8}</Pattern>
+			</Expression>
+			<Expression id="12">
+				<Pattern><![CDATA[^([A-Za-z0-9 &'\(\)\*,\-\.]*)$]]></Pattern>
+			</Expression>
+			<Expression id="13">
+				<Pattern>^(([ABCEGHJKLMNOPRSTWXYZ][ABCEGHJKLMNPRSTWXYZ][0-9]{6}[A-D])|(NOT KNOWN))$</Pattern>
+			</Expression>
+			<Expression id="14">
+				<Pattern>^((GIR 0AA)|((([A-Z][0-9][0-9]?)|(([A-Z][A-HJ-Y][0-9][0-9]?)|(([A-Z][0-9][A-Z])|([A-Z][A-HJ-Y][0-9]?[A-Z])))) [0-9][A-Z]{2}))$</Pattern>
+			</Expression>
+			<Expression id="15">
+				<Pattern>^([1-9][0-9]{0,3}[AHLPTVY])|(BR)|(0T)|(NT)|(FT)|(D0)|([K][1-9][0-9]{0,3})$</Pattern>
+			</Expression>
+			<Expression id="16">
+				<Pattern>^(0?[1-9]|[1-4][0-9]|5[0-6])$</Pattern>
+			</Expression>
+			<Expression id="17">
+				<Pattern>^([0-9]{2}[1-9]/[A-Z0-9][0-9]{9})$</Pattern>
+			</Expression>
+			<Expression id="18">
+				<Pattern>^([A-Z][0-9]{9})$</Pattern>
+			</Expression>
+			<Expression id="19">
+				<Pattern>^(0?[0-9]|[1-4][0-9]|5[0-2])$</Pattern>
+			</Expression>
+			<Expression id="20">
+				<Pattern>^(S[012468]\d{6}[A-Z])$</Pattern>
+			</Expression>
+			<Expression id="21">
+				<Pattern>^(E3\d{6}[A-Z])$</Pattern>
+			</Expression>
+		</Category>
+		<Category id="8">
+			<Expression id="1">
+				<Pattern/>
+			</Expression>
+		</Category>
+		<Category id="9">
+			<Expression id="1">
+				<Pattern/>
+			</Expression>
+		</Category>
+		<Category id="10">
+			<Expression id="1">
+				<Pattern/>
+			</Expression>
+		</Category>
+	</Categories>
+</RegularExpressionsCatalog>

@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="urn:IBZservices" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="urn:IBZservices" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema targetNamespace="urn:IBZservices">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <s:complexType name="returnmsg">
+        <s:all>
+          <s:element name="ERRORCODE" type="s:byte" />
+          <s:element name="ERRORDESC" type="s:string" />
+        </s:all>
+      </s:complexType>
+      <s:complexType name="resellerinfo">
+        <s:all>
+          <s:element name="name" type="s:string" />
+          <s:element name="url" type="s:string" />
+          <s:element name="renewalurl" type="s:string" />
+          <s:element name="parentid" type="s:string" />
+          <s:element name="customerid" type="s:string" />
+          <s:element name="customeruid" type="s:string" />
+          <s:element name="emailauthorized" type="s:string" />
+        </s:all>
+      </s:complexType>
+      <s:complexType name="updateresellerinfo">
+        <s:all>
+          <s:element name="name" type="s:string" />
+          <s:element name="url" type="s:string" />
+          <s:element name="renewalurl" type="s:string" />
+          <s:element name="customeruid" type="s:string" />
+          <s:element name="emailauthorized" type="s:string" />
+        </s:all>
+      </s:complexType>
+      <s:complexType name="rprodsinfo">
+        <s:all>
+          <s:element name="code" type="s:string" />
+          <s:element name="name" type="s:string" />
+          <s:element name="resellercode" type="s:string" />
+        </s:all>
+      </s:complexType>
+      <s:complexType name="rprodsarray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:attribute d7p1:arrayType="s0:rprodsinfo[]" ref="soapenc:arrayType" xmlns:d7p1="http://schemas.xmlsoap.org/wsdl/" />
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="addresellprod">
+        <s:all>
+          <s:element name="products" type="s0:rprodsarray" />
+          <s:element name="customeruid" type="s:string" />
+        </s:all>
+      </s:complexType>
+      <s:complexType name="updateresellprods">
+        <s:all>
+          <s:element name="name" type="s:string" />
+          <s:element name="code" type="s:string" />
+          <s:element name="resellercode" type="s:string" />
+          <s:element name="customeruid" type="s:string" />
+        </s:all>
+      </s:complexType>
+      <s:complexType name="delprodscode">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:attribute d7p1:arrayType="s:string[]" ref="soapenc:arrayType" xmlns:d7p1="http://schemas.xmlsoap.org/wsdl/" />
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="delresellprods">
+        <s:all>
+          <s:element name="codesarray" type="s0:delprodscode" />
+          <s:element name="customeruid" type="s:string" />
+        </s:all>
+      </s:complexType>
+      <s:complexType name="productinfo">
+        <s:all>
+          <s:element name="code" type="s:string" />
+          <s:element name="name" type="s:string" />
+          <s:element name="resellercode" type="s:string" />
+        </s:all>
+      </s:complexType>
+      <s:complexType name="productlist">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:attribute d7p1:arrayType="s0:productinfo[]" ref="soapenc:arrayType" xmlns:d7p1="http://schemas.xmlsoap.org/wsdl/" />
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="returnResellerProducts">
+        <s:all>
+          <s:element name="ERRORCODE" type="s:byte" />
+          <s:element name="ERRORDESC" type="s:string" />
+          <s:element name="products" type="s0:productlist" />
+        </s:all>
+      </s:complexType>
+      <s:complexType name="pcodes">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:attribute d7p1:arrayType="s:string[]" ref="soapenc:arrayType" xmlns:d7p1="http://schemas.xmlsoap.org/wsdl/" />
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="resellerproductcode">
+        <s:all>
+          <s:element name="codes" type="s0:pcodes" />
+          <s:element name="reselleruid" type="s:string" />
+        </s:all>
+      </s:complexType>
+      <s:complexType name="getresellerinf">
+        <s:all>
+          <s:element name="name" type="s:string" />
+          <s:element name="url" type="s:string" />
+          <s:element name="renewalurl" type="s:string" />
+          <s:element name="customerid" type="s:string" />
+          <s:element name="emailauthorized" type="s:string" />
+          <s:element name="regdate" type="s:string" />
+        </s:all>
+      </s:complexType>
+      <s:complexType name="returnResellerInfo">
+        <s:all>
+          <s:element name="ERRORCODE" type="s:int" />
+          <s:element name="ERRORDESC" type="s:string" />
+          <s:element name="info" type="s0:getresellerinf" />
+        </s:all>
+      </s:complexType>
+      <s:complexType name="pinfo">
+        <s:all>
+          <s:element name="code" type="s:string" />
+          <s:element name="name" type="s:string" />
+          <s:element name="referrer" type="s:string" />
+          <s:element name="description" type="s:string" />
+        </s:all>
+      </s:complexType>
+      <s:complexType name="resellersinfo">
+        <s:all>
+          <s:element name="fromreseller" type="s:string" />
+          <s:element name="toreseller" type="s:string" />
+        </s:all>
+      </s:complexType>
+    </s:schema>
+  </types>
+  <message name="addResellerRequest">
+    <part name="resellerinfo" type="s0:resellerinfo" />
+  </message>
+  <message name="addResellerResponse">
+    <part name="returnmsg" type="s0:returnmsg" />
+  </message>
+  <message name="updateResellerRequest">
+    <part name="updateresellerinfo" type="s0:updateresellerinfo" />
+  </message>
+  <message name="updateResellerResponse">
+    <part name="returnmsg" type="s0:returnmsg" />
+  </message>
+  <message name="addResellerProductsRequest">
+    <part name="addresellprod" type="s0:addresellprod" />
+  </message>
+  <message name="addResellerProductsResponse">
+    <part name="returnmsg" type="s0:returnmsg" />
+  </message>
+  <message name="updateResellerProductsRequest">
+    <part name="updateresellprods" type="s0:updateresellprods" />
+  </message>
+  <message name="updateResellerProductsResponse">
+    <part name="returnmsg" type="s0:returnmsg" />
+  </message>
+  <message name="deleteResellerProductsRequest">
+    <part name="delresellprods" type="s0:delresellprods" />
+  </message>
+  <message name="deleteResellerProductsResponse">
+    <part name="returnmsg" type="s0:returnmsg" />
+  </message>
+  <message name="getResellerProductsRequest">
+    <part name="reselleruid" type="s:string" />
+  </message>
+  <message name="getResellerProductsResponse">
+    <part name="returnmsg" type="s0:returnResellerProducts" />
+  </message>
+  <message name="getResellerM2ProductRequest">
+    <part name="resellerproductcode" type="s0:resellerproductcode" />
+  </message>
+  <message name="getResellerM2ProductResponse">
+    <part name="returnmsg" type="s0:returnResellerProducts" />
+  </message>
+  <message name="getResellerProductNameRequest">
+    <part name="resellerproductcode" type="s0:resellerproductcode" />
+  </message>
+  <message name="getResellerProductNameResponse">
+    <part name="returnmsg" type="s0:returnResellerProducts" />
+  </message>
+  <message name="getResellerInfoRequest">
+    <part name="reselleruid" type="s:string" />
+  </message>
+  <message name="getResellerInfoResponse">
+    <part name="returnmsg" type="s0:returnResellerInfo" />
+  </message>
+  <message name="addPoolProductRequest">
+    <part name="productinfo" type="s0:pinfo" />
+  </message>
+  <message name="addPoolProductResponse">
+    <part name="returnmsg" type="s0:returnmsg" />
+  </message>
+  <message name="copyResellerProductsRequest">
+    <part name="resellers" type="s0:resellersinfo" />
+  </message>
+  <message name="copyResellerProductsResponse">
+    <part name="returnmsg" type="s0:returnmsg" />
+  </message>
+  <portType name="IBZservicesPortType">
+    <operation name="addReseller">
+      <input message="s0:addResellerRequest" />
+      <output message="s0:addResellerResponse" />
+    </operation>
+    <operation name="updateReseller">
+      <input message="s0:updateResellerRequest" />
+      <output message="s0:updateResellerResponse" />
+    </operation>
+    <operation name="addResellerProducts">
+      <input message="s0:addResellerProductsRequest" />
+      <output message="s0:addResellerProductsResponse" />
+    </operation>
+    <operation name="updateResellerProducts">
+      <input message="s0:updateResellerProductsRequest" />
+      <output message="s0:updateResellerProductsResponse" />
+    </operation>
+    <operation name="deleteResellerProducts">
+      <input message="s0:deleteResellerProductsRequest" />
+      <output message="s0:deleteResellerProductsResponse" />
+    </operation>
+    <operation name="getResellerProducts">
+      <input message="s0:getResellerProductsRequest" />
+      <output message="s0:getResellerProductsResponse" />
+    </operation>
+    <operation name="getResellerM2Product">
+      <input message="s0:getResellerM2ProductRequest" />
+      <output message="s0:getResellerM2ProductResponse" />
+    </operation>
+    <operation name="getResellerProductName">
+      <input message="s0:getResellerProductNameRequest" />
+      <output message="s0:getResellerProductNameResponse" />
+    </operation>
+    <operation name="getResellerInfo">
+      <input message="s0:getResellerInfoRequest" />
+      <output message="s0:getResellerInfoResponse" />
+    </operation>
+    <operation name="addPoolProduct">
+      <input message="s0:addPoolProductRequest" />
+      <output message="s0:addPoolProductResponse" />
+    </operation>
+    <operation name="copyResellerProducts">
+      <input message="s0:copyResellerProductsRequest" />
+      <output message="s0:copyResellerProductsResponse" />
+    </operation>
+  </portType>
+  <binding name="IBZservicesBinding" type="s0:IBZservicesPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <operation name="addReseller">
+      <soap:operation soapAction="urn:IBZservices#addReseller" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:IBZservices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:IBZservices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="updateReseller">
+      <soap:operation soapAction="urn:IBZservices#updateReseller" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:IBZservices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:IBZservices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="addResellerProducts">
+      <soap:operation soapAction="urn:IBZservices#addResellerProducts" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:IBZservices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:IBZservices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="updateResellerProducts">
+      <soap:operation soapAction="urn:IBZservices#updateResellerProducts" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:IBZservices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:IBZservices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="deleteResellerProducts">
+      <soap:operation soapAction="urn:IBZservices#deleteResellerProducts" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:IBZservices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:IBZservices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="getResellerProducts">
+      <soap:operation soapAction="urn:IBZservices#getResellerProducts" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:IBZservices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:IBZservices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="getResellerM2Product">
+      <soap:operation soapAction="urn:IBZservices#getResellerM2Product" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:IBZservices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:IBZservices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="getResellerProductName">
+      <soap:operation soapAction="urn:IBZservices#getResellerProductName" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:IBZservices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:IBZservices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="getResellerInfo">
+      <soap:operation soapAction="urn:IBZservices#getResellerInfo" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:IBZservices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:IBZservices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="addPoolProduct">
+      <soap:operation soapAction="urn:IBZservices#addPoolProduct" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:IBZservices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:IBZservices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="copyResellerProducts">
+      <soap:operation soapAction="urn:IBZservices#copyResellerProducts" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:IBZservices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:IBZservices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="IBZservices">
+    <port name="IBZservicesPort" binding="s0:IBZservicesBinding">
+      <soap:address location="http://webservices.infinibiz.com/reseller.php" />
+    </port>
+  </service>
+</definitions>
